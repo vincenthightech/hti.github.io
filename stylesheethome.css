@@ -17,7 +17,7 @@ body {
 /* NAVIGATION BAR        */
 /* ===================== */
 
-ul {
+.navbar ul {
     list-style: none;
     display: flex;               
     justify-content: center;     
@@ -28,11 +28,11 @@ ul {
     border-bottom: 4px solid #00c2cb;
 }
 
-ul li {
+.navbar ul li {
     margin: 0 1.5rem;
 }
 
-ul li a {
+.navbar ul li a {
     text-decoration: none;
     color: #ffffff;
     font-weight: 500;
@@ -41,7 +41,7 @@ ul li a {
     padding-bottom: 0.25rem;
 }
 
-ul li a:hover {
+.navbar ul li a:hover {
     color: #00c2cb;
     border-bottom: 2px solid #00c2cb;
 }
