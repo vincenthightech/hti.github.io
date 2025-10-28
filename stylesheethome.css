@@ -17,16 +17,14 @@ body {
 /* NAVIGATION BAR        */
 /* ===================== */
 
-.navbar ul {
-    list-style: none;
+.navbar {
     display: flex;
-    justify-content: center;     
     align-items: center;
+    justify-content: space-between; /* space between logo and nav links */
     background-color: #004466;
-    padding: 1rem 0;
-    padding-left: 150px;
-    margin: 0;
+    padding: 1rem 2rem;
     border-bottom: 4px solid #00c2cb;
+    position: relative;
 }
 
 .navbar ul li {
@@ -46,6 +44,72 @@ body {
     color: #00c2cb;
     border-bottom: 2px solid #00c2cb;
 }
+
+/* ===================== */
+/* RESPONSIVE NAVBAR     */
+/* ===================== */
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Desktop layout (default) */
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  margin-right: 150px;
+}
+
+/* ===================== */
+/* MOBILE VIEW           */
+/* ===================== */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* stack items vertically */
+    align-items: stretch;
+    padding: 1rem;
+  }
+
+  /* Top row with logo + toggle button */
+  .navbar-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #004466;
+    border-top: 2px solid #00c2cb;
+    margin: 0;
+    padding: 1rem 0;
+  }
+
+  .nav-links li {
+    margin: 0.75rem 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
+
 
 
 /* ===================== */
@@ -117,17 +181,8 @@ footer {
 /* LOGO STYLING         */
 /* ==================== */
 
-.logo {
-    position: relative;
-    top: 10px;
-    left: 20px;
-    z-index: 10;
-    
-}
-
 .logo img {
-    width: 250px;
-    height: 100%;
-    max-height: 20vh;
-    display: inline-block;
+    width: 180px;
+    height: auto;
+    display: block;
 }
