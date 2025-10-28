@@ -186,3 +186,62 @@ footer {
     height: auto;
     display: block;
 }
+
+/* ===================== */
+/* DROPDOWN (Company)    */
+/* ===================== */
+
+.dropdown { position: relative; }
+
+.dropdown > a::after {
+  content: " ▾";
+  font-size: 0.85em;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 180px;
+  background-color: #004466;
+  border: 2px solid #00c2cb;
+  padding: 0.5rem 0;
+  z-index: 1000;
+}
+
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li { 
+    margin: 0;
+    list-style: none;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #ffffff;
+  text-decoration: none;
+  border-bottom: none; /* override underline style from main nav */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+  background-color: #006680;
+  color: #00c2cb;
+}
+
+/* Mobile: make submenu flow in the column stack */
+@media (max-width: 768px) {
+  .dropdown-menu {
+    position: static;
+    border: none;
+    min-width: 0;
+    width: 100%;
+    padding: 0;
+  }
+  .dropdown-menu a { padding: 0.5rem 0; }
+}
