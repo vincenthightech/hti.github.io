@@ -7,6 +7,7 @@
     content="width=device-width, initial-scale=1"
   />
   <title>Hydrophones and Acoustic Systems</title>
+  <script src="theme-init.js"></script>
   <link rel="stylesheet" href="stylesheethome.css" />
 </head>
 <body>
@@ -17,9 +18,17 @@
       <div class="navbar-top">
         <div class="logo">
           <a href="index.html" aria-label="Home">
-            <img src="Images/htiLogo.png" alt="High Tech Inc Logo" />
+            <img class="logo--light" src="Images/htiLogo.png" alt="High Tech Inc Logo" />
+            <img class="logo--dark" src="Images/htiLogo_dark.png" alt="High Tech Inc Dark Mode Logo" aria-hidden="true" />
           </a>
         </div>
+
+        <!-- Theme switch -->
+      <label class="switch" id="theme-switcher" aria-label="Toggle dark mode">
+        <input type="checkbox" id="theme-switch" />
+        <span class="slider" aria-hidden="true"></span>
+        <span class="switch-text" id="theme-switch-text">Dark</span>
+      </label>
 
         <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
       </div>
@@ -68,9 +77,9 @@
           <a class="btn btn-secondary" href="contact.html">Contact Us</a>
         </div>
         <div class="hero-bullets">
-          <span>Fact</span>
-          <span>Fact</span>
-          <span>Fact</span>
+          <span>Government and Industry Applications</span>
+          <span>Withstands Pressure up to 10,000 PSI</span>
+          <span>FACT</span>
         </div>
       </div>
       <div class="hero-media" aria-hidden="true">
@@ -184,7 +193,8 @@
   <footer>
     <div class="container footer-grid">
       <div class="footer-brand">
-        <img src="Images/htiLogo.png" alt="High Tech Inc Logo" />
+        <img class="logo--light" src="Images/htiLogo_dark.png" alt="High Tech Inc Dark Mode Logo" />
+        <img class="logo--dark" src="Images/htiLogo_dark.png" alt="High Tech Inc Dark Mode Logo" aria-hidden="true" />
         <p>Precision hydrophones and acoustic systems.</p>
       </div>
       <div>
@@ -211,7 +221,7 @@
     </div>
   </footer>
 
-  <script src="ham.js" defer></script>
+  <script src="main.js" defer></script>
   <script>
     // Sticky navbar background on scroll
     document.addEventListener('scroll', () => {
