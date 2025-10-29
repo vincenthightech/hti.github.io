@@ -113,6 +113,21 @@ body {
   .dropdown.open .dropdown-menu{ display: block; }
 }
 
+/* Remove bullets/padding from all nav lists, including mobile + dropdown */
+.navbar ul,
+.navbar li,
+.nav-links,
+.nav-links > li,
+.dropdown-menu,
+.dropdown-menu > li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Extra safety for the submenu */
+.dropdown-menu { padding-left: 0; }
+
 /* ========== Hero ========== */
 .hero{
   background:
