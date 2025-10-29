@@ -9,6 +9,156 @@
   <!-- Use the same stylesheet you shared -->
   <link rel="stylesheet" href="stylesheethome.css" />
 </head>
+
+<style>
+/* Optional defaults */
+.icon { width: 24px; height: 24px; color: #0A2E3D; vertical-align: text-bottom; }
+</style>
+
+
+<!-- SPRITE (hidden symbols) -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+
+  <!-- 1) KEY: oa-hydrophone (standalone sensor capsule) -->
+<symbol id="oa-hydrophone" viewBox="0 0 64 64" fill="none">
+<g stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<!-- cable -->
+<path d="M32 6 V18"/>
+<!-- capsule body -->
+<rect x="23" y="18" width="18" height="22" rx="6"/>
+<!-- grille lines -->
+<path d="M26 24 H38"/>
+<path d="M26 30 H38"/>
+<!-- tail / strain relief -->
+<path d="M32 40 V48"/>
+<!-- weight / termination -->
+<circle cx="32" cy="52" r="4"/>
+</g>
+</symbol>
+
+
+<!-- 9) KEY: oa-array-vertical (vertical cable array with stacked sensors) -->
+<symbol id="oa-array-vertical" viewBox="0 0 64 64" fill="none">
+<g stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<!-- surface -->
+<path d="M8 12 C16 8, 24 16, 32 12 S48 16, 56 12"/>
+<!-- vertical cable -->
+<path d="M32 12 V52"/>
+<!-- sensor capsules -->
+<rect x="28" y="20" width="8" height="6" rx="3"/>
+<rect x="28" y="30" width="8" height="6" rx="3"/>
+<rect x="28" y="40" width="8" height="6" rx="3"/>
+<!-- bottom weight -->
+<circle cx="32" cy="56" r="4"/>
+</g>
+</symbol>
+
+<!-- 10) KEY: oa-autonomous-das (autonomous seabed recorder for marine seismic) -->
+<symbol id="oa-autonomous-das" viewBox="0 0 64 64" fill="none">
+<g stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<!-- surface -->
+<path d="M8 12 C16 8, 24 16, 32 12 S48 16, 56 12"/>
+<!-- incoming seismic wavefronts -->
+<path d="M8 44 C18 38, 18 54, 8 50"/>
+<path d="M14 42 C26 34, 26 56, 14 52"/>
+<!-- seabed -->
+<path d="M10 56 H54"/>
+<!-- recorder node body (no tether) -->
+<rect x="24" y="44" width="16" height="10" rx="4"/>
+<!-- record dot on body -->
+<circle cx="32" cy="49" r="2"/>
+<!-- autonomy/time glyph -->
+<circle cx="48" cy="36" r="5"/>
+<path d="M48 36 V32"/>
+<path d="M48 36 H51"/>
+</g>
+</symbol>
+
+
+<!-- 6) KEY: oa-source (active acoustic source emitting pings) -->
+<symbol id="oa-source" viewBox="0 0 64 64" fill="none">
+<g stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<!-- surface -->
+<path d="M8 20 C16 16, 24 24, 32 20 S48 24, 56 20"/>
+<!-- source body on a simple stand -->
+<circle cx="20" cy="40" r="6"/>
+<path d="M20 46 V52"/>
+<path d="M12 56 H28"/>
+<!-- rightward ping arcs -->
+<path d="M32 36 C40 32, 40 48, 32 44"/>
+<path d="M38 32 C50 26, 50 54, 38 48"/>
+<path d="M44 28 C60 20, 60 60, 44 52"/>
+</g>
+</symbol>
+
+<!-- 11) KEY: oa-cnc-mill (CNC milling: spindle + end mill over vise/workpiece) -->
+<symbol id="oa-cnc-mill" viewBox="0 0 64 64" fill="none">
+<g stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<!-- machine column -->
+<path d="M12 14 V50" stroke-width="4"/>
+<!-- spindle head -->
+<rect x="20" y="16" width="14" height="10" rx="2"/>
+<!-- spindle -->
+<path d="M27 26 V36"/>
+<!-- end mill -->
+<path d="M27 36 L24 42 H30 Z"/>
+<!-- toolpath to work (dashed) -->
+<path d="M30 34 H44" stroke-dasharray="4 4"/>
+<!-- vise & workpiece on table -->
+<rect x="34" y="42" width="24" height="6" rx="2"/> <!-- vise base -->
+<rect x="36" y="36" width="6" height="6" rx="1"/> <!-- fixed jaw -->
+<rect x="56" y="36" width="6" height="6" rx="1"/> <!-- moving jaw -->
+<rect x="44" y="36" width="8" height="6" rx="1"/> <!-- workpiece -->
+<!-- table line -->
+<path d="M10 52 H58"/>
+</g>
+</symbol>
+
+
+<!-- 12) KEY: oa-contract-mfg (contract + manufacturing: document with checkmark + gear) -->
+<symbol id="oa-contract-mfg" viewBox="0 0 64 64" fill="none">
+<g stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<!-- document with folded corner -->
+<rect x="12" y="12" width="28" height="38" rx="2"/>
+<path d="M40 12 L40 22 L30 12"/>
+<!-- signature/checkmark -->
+<path d="M18 32 L24 38 L32 28"/>
+<!-- manufacturing gear at bottom-right -->
+<circle cx="48" cy="46" r="7"/>
+<circle cx="48" cy="46" r="2"/>
+<!-- minimal teeth -->
+<path d="M48 36 V32"/>
+<path d="M58 46 H54"/>
+<path d="M48 60 V56"/>
+<path d="M38 46 H42"/>
+</g>
+</symbol>
+
+</svg>
+
+</svg>
+
+
+<!-- USAGE — COPY/PASTE THESE KEYS WHERE YOU NEED THE ICONS -->
+<!--
+
+<svg class="icon"><use href="#oa-source"/></svg>
+
+-->
+
+
+<!-- Color and size are controlled by CSS/currentColor. Example:
+<style>
+.ocean { color: #0e7490; }
+.big { width: 40px; height: 40px; }
+</style>
+
+
+<span class="ocean big">
+<svg class="icon"><use href="#oa-buoy"/></svg>
+</span>
+-->
+
 <body>
 
   <!-- Navbar  -->
@@ -80,9 +230,9 @@
           <a class="btn btn-secondary" href="contact.html">Talk to Engineering</a>
         </div>
         <div class="hero-bullets" aria-label="Highlights">
-          <span>Up to 10,000 PSI</span>
-          <span>Lab-grade calibration</span>
-          <span>Government & industry deployments</span>
+          <span>FACT</span>
+          <span>FACT</span>
+          <span>FACT</span>
         </div>
       </div>
     </div>
@@ -97,7 +247,7 @@
       <div class="feature-grid">
         <!-- Hydrophones -->
         <article class="card">
-          <div class="icon">ICON</div>
+          <svg class="icon"><use href="#oa-hydrophone"/></svg>
           <h3>Hydrophones</h3>
           <p>
             DESCRIPTIOM
@@ -115,7 +265,7 @@
 
         <!-- Arrays -->
         <article class="card">
-          <div class="icon">ICON</div>
+          <svg class="icon"><use href="#oa-array-vertical"/></svg>
           <h3>Arrays</h3>
           <p>
             DESCRIPTION
@@ -131,10 +281,10 @@
           </div>
         </article>
 
-        <!-- Acoustic Systems -->
+        <!-- Acoustic Sources -->
         <article class="card">
-          <div class="icon">ICON</div>
-          <h3>Acoustic Systems</h3>
+          <svg class="icon"><use href="#oa-source"/></svg>
+          <h3>Acoustic Sources</h3>
           <p>
             DESCRIPTION
           </p>
@@ -151,7 +301,7 @@
 
         <!-- Data Acquisition -->
         <article class="card">
-          <div class="icon">ICON</div>
+          <svg class="icon"><use href="#oa-autonomous-das"/></svg>
           <h3>Data Acquisition Systems</h3>
           <p>
             DESCRIPTION
@@ -169,7 +319,7 @@
 
         <!-- CNC Machining -->
         <article class="card">
-          <div class="icon">ICON</div>
+          <svg class="icon"><use href="#oa-cnc-mill"/></svg>
           <h3>CNC Machining</h3>
           <p>
             DESCRIPTION
@@ -187,7 +337,7 @@
 
         <!-- Contract Manufacturing -->
         <article class="card">
-          <div class="icon">ICON</div>
+          <svg class="icon"><use href="#oa-contract-mfg"/></svg>
           <h3>Contract Manufacturing</h3>
           <p>
             DESCRIPTION
@@ -248,11 +398,11 @@
     </div>
   </section>
 
-  <!-- Footer (unchanged structure/classes) -->
+  <!-- Footer  -->
   <footer>
     <div class="container footer-grid">
       <div class="footer-brand">
-        <img class="logo--light" src="Images/htiLogo.png" alt="High Tech Inc Logo" />
+        <img class="logo--light" src="Images/htiLogo_dark.png" alt="High Tech Inc Logo" />
         <img class="logo--dark" src="Images/htiLogo_dark.png" alt="High Tech Inc Dark Mode Logo" aria-hidden="true" />
         <p>Precision hydrophones and acoustic systems.</p>
       </div>
@@ -279,7 +429,7 @@
     </div>
   </footer>
 
-  <!-- Your existing scripts -->
+
   <script src="main.js" defer></script>
 
   <!-- Minimal fallbacks -->
