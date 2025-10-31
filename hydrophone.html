@@ -1,88 +1,180 @@
 <!DOCTYPE html>
-
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" />
-        <title></title>
-        <link rel="stylesheet" href="stylesheethome.css">
-    </head>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hydrophones | High Tech Inc</title>
+  <script src="theme-init.js"></script>
+  <link rel="stylesheet" href="stylesheethome.css" />
+</head>
+<body>
 
-    <body>
-        <div class="navbar">
-        <img src="Images/htiLogo.png" alt="High Tech Inc Logo">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="products.html">Products and Services</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="event.html">Events/News</a></li>
-        </ul>
+  <!-- Sticky Navbar (same structure as index) -->
+  <nav class="navbar" role="navigation" aria-label="Main">
+    <div class="container">
+      <div class="navbar-top">
+        <div class="logo">
+          <a href="index.html" aria-label="Home">
+            <img class="logo--light" src="Images/htiLogo.png" alt="High Tech Inc Logo" />
+            <img class="logo--dark" src="Images/htiLogo_dark.png" alt="High Tech Inc Dark Mode Logo" aria-hidden="true" />
+          </a>
         </div>
+
+        <!-- Theme switch -->
+        <label class="switch" id="theme-switcher" aria-label="Toggle dark mode">
+          <input type="checkbox" id="theme-switch" />
+          <span class="slider" aria-hidden="true"></span>
+          <span class="switch-text" id="theme-switch-text">Dark</span>
+        </label>
+
+        <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+      </div>
+
+      <ul class="nav-links" role="menubar">
+        <!-- Products dropdown -->
+        <li class="dropdown" role="none">
+          <a href="products.html" role="menuitem" aria-haspopup="true" aria-expanded="false">
+            Products and Services
+          </a>
+          <ul class="dropdown-menu" role="menu" aria-label="Products submenu">
+            <li role="none"><a role="menuitem" href="hydrophone.html">Hydrophones</a></li>
+            <li role="none"><a role="menuitem" href="cncMachiningServices.html">CNC Machining</a></li>
+            <li role="none"><a role="menuitem" href="array.html">Arrays</a></li>
+            <li role="none"><a role="menuitem" href="acousticSources.html">Acoustic Systems</a></li>
+            <li role="none"><a role="menuitem" href="DataAcquisitionSystems.html">Data Acquisition Systems</a></li>
+            <li role="none"><a role="menuitem" href="contractManufacturing.html">Contract Manufacturing</a></li>
+          </ul>
+        </li>
+
+        <!-- Company dropdown -->
+        <li class="dropdown" role="none">
+          <a href="about.html" role="menuitem" aria-haspopup="true" aria-expanded="false">Company</a>
+          <ul class="dropdown-menu" role="menu" aria-label="Company submenu">
+            <li role="none"><a role="menuitem" href="about.html">About Us</a></li>
+            <li role="none"><a role="menuitem" href="contact.html">Contact</a></li>
+            <li role="none"><a role="menuitem" href="event.html">Events/News</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page header (compact hero) -->
+  <section class="hero hero--compact">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <h1>Hydrophones</h1>
+        <p>Application-sorted models. Click a part number for details.</p>
+        <div class="hero-bullets">
+          <span>Lab-grade calibration</span>
+          <span>Harsh-environment builds</span>
+          <span>Field-proven designs</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Catalog -->
+  <section id="catalog" class="features">
+    <div class="container">
+      <h2>Catalog by Application</h2>
+      <p class="subhead">Direct links to model pages.</p>
+
+      <div class="feature-grid">
+
+        <!-- Anti-Submarine Warfare Defense -->
+        <article class="card">
+          <h3>Anti-Submarine Warfare Defense</h3>
+          <ul class="link-list">
+            <li><a href="./HTI-90-U.html">HTI-90-U</a></li>
+            <li><a href="HTI-92-WB.html">HTI-92-WB</a></li>
+            <li><a href="HTI-90-PC.html">HTI-90-PC</a></li>
+            <li><a href="./HTI-O4-PCAULF.html">HTI-04-PCA/ULF</a></li>
+            <li><a href="HTI-05-PC.html">HTI-05-PC</a></li>
+          </ul>
+        </article>
+
+        <!-- Oil & Gas -->
+        <article class="card">
+          <h3>Oil &amp; Gas</h3>
+          <ul class="link-list">
+            <li><a href="HTI-96-MinSeries.html">HTI-96-Min Series</a></li>
+            <li><a href="HTI-96-minExportable.html">HTI-96-Min Exportable</a></li>
+            <li><a href="HTI-96-Min-PC.html">HTI-96-Min-PC</a></li>
+            <li><a href="HTI-94-SSQ.html">HTI-94-SSQ</a></li>
+            <li><a href="HTI-97-DA.html">HTI-97-DA</a></li>
+            <li><a href="HTI-97-DAexportable.html">HTI-97-DA Exportable</a></li>
+            <li><a href="HTI-15-min.html">HTI-15-Min</a></li>
+            <li><a href="HTI-15-Min-Micro.html">HTI-15-Min-Micro</a></li>
+          </ul>
+        </article>
+
+        <!-- Borehole/Downhole -->
+        <article class="card">
+          <h3>Borehole / Downhole</h3>
+          <ul class="link-list">
+            <li><a href="HTI-00-DHPC.html">HTI-00-DHPC</a></li>
+            <li><a href="HTI-02-DHPCD.html">HTI-02-DHPC/D</a></li>
+            <li><a href="HTI-02-DHPCG.html">HTI-02-DHPC/G</a></li>
+            <li><a href="HTI-05-DHPC.html">HTI-05-DHPC</a></li>
+            <li><a href="HTI-14-DHPC.html">HTI-14-DHPC</a></li>
+          </ul>
+        </article>
+
+        <!-- Wildlife Research -->
+        <article class="card">
+          <h3>Wildlife Research</h3>
+          <ul class="link-list">
+            <li><a href="marineMammal.html">Marine Mammal</a></li>
+            <li><a href="HTI-99-HF.html">HTI-99-HF</a></li>
+            <li><a href="HTI-99-UHF.html">HTI-99-UHF</a></li>
+          </ul>
+        </article>
+
+        <!-- Gun Monitoring -->
+        <article class="card">
+          <h3>Gun Monitoring</h3>
+          <ul class="link-list">
+            <li><a href="reftek17.html">Reftek 17</a></li>
+            <li><a href="HTI-90-U.html">HTI-90-U</a></li>
+            <li><a href="HTI-94-SSQ.html">HTI-94-SSQ</a></li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer (same as index) -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img class="logo--light" src="Images/htiLogo_dark.png" alt="High Tech Inc Dark Mode Logo" />
+        <img class="logo--dark" src="Images/htiLogo_dark.png" alt="High Tech Inc Dark Mode Logo" aria-hidden="true" />
+        <p>Precision hydrophones and acoustic systems.</p>
+      </div>
+      <div>
+        <h4>Products and Services</h4>
         <ul>
-            <li>Hydrophones</li>
-            <li>Data Acquisition Systems</li>
-            <li>Acoustic Systems</li>
-            <li>Contract Manufacturing</li>
-            <li>Arrays</li>
+          <li><a href="array.html">Arrays</a></li>
+          <li><a href="hydrophone.html">Hydrophones</a></li>
+          <li><a href="cncMachiningServices.html">CNC Machining</a></li>
+          <li><a href="products.html">All Products</a></li>
         </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="event.html">Events/News</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <small>© <span id="year"></span> High Tech Inc. All rights reserved.</small>
+    </div>
+  </footer>
 
-        <figure>
-            <figcaption>Oil & Gas</figcaption>
-            <ul>
-                <li><a href="HTI-96-MinSeries.html">HTI-96-Min Series</a></li>
-                <li><a href="HTI-96-minExportable.html">HTI-96-Min Exportable</a></li>
-                <li><a href="HTI-96-Min-PC.html">HTI-96-Min-PC</a></li>
-                <li><a href="HTI-94-SSQ.html">HTI-94-SSQ</a></li>
-                <li><a href="HTI-97-DA.html">HTI-97-DA</a></li>
-                <li><a href="HTI-97-DAexportable.html">HTI-97-DA Exportable</a></li>
-                <li><a href="HTI-15-min.html"></a>HTI-15-Min</li>
-                <li><a href="HTI-15-Min-Micro.html"></a>HTI-15-Min-Micro</li>
-            </ul>
-        </figure>
-
-        <figure>
-            <figcaption>Anti-Submarine Warfare Defense</figcaption>
-            <ul>
-                <li><a href="HTI-90-U.html">HTI-90-U</a></li>
-                <li><a href="HTI-92-WB.html">HTI-92-WB</a></li>
-                <li><a href="HTI-90-PC.html">HTI-90-PC</a></li>
-                <li><a href=HTI-04-PCAULF.html>HTI-04-PCA/ULF</a></li>
-                <li><a href="HTI-05-PC.html">HTI-05-PC</a></li>
-            </ul>
-        </figure>
-
-        <figure>
-            <figcaption>Borehole/Downhole</figcaption>
-            <ul>
-                <li><a href="HTI-00-DHPC.html">HTI-00-DHPC</a></li>
-                <li><a href="HTI-02-DHPCD.HTML">HTI-02-DHPC/D</a></li>
-                <li><a href="HTI-02-DHPCG.html">HTI-02-DHPC/G</a></li>
-                <li><a href="HTI-05-DHPC.html">HTI-05-DHPC</a></li>
-                <li><a href="HTI-14-DHPC.html">HTI-14-DHPC</a></li>
-            </ul>
-        </figure>
-
-        <figure>
-            <figcaption>Wildlife Research</figcaption>
-            <ul>
-                <li><a href="marineMammal.html">Marine Mammal</a></li>
-                <li><a href="HTI-99-HF.html">HTI-99-HF</a></li>
-                <li><a href="HTI-99-UHF.html">HTI-99-UHF</a></li>
-            </ul>
-        </figure>
-
-        <figure>
-            <figcaption>Gun Monitoring</figcaption>
-            <ul>
-                <li><a href="reftek17.html">Reftek 17</a></li>
-                <li><a href="HTI-90-U.html">HTI-90-U</a></li>
-                <li><a href="HTI-94-SSQ.html">HTI-94-SSQ</a></li>
-            </ul>
-        </figure>
-        
-
-
-    </body>
-
+  <script src="main.js" defer></script>
+</body>
 </html>

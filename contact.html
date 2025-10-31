@@ -1,40 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" />
-        <title>Contact Us</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact | High Tech Inc</title>
+  <script src="theme-init.js"></script>
+  <link rel="stylesheet" href="stylesheethome.css" />
+</head>
+<body>
 
-    <body>
-        <img src="Images/htiLogo.png" alt="High Tech Inc Logo">
+  <!-- Navbar -->
+  <nav class="navbar" role="navigation" aria-label="Main">
+    <div class="container">
+      <div class="navbar-top">
+        <div class="logo">
+          <a href="index.html" aria-label="Home">
+            <img class="logo--light" src="Images/htiLogo.png" alt="High Tech Inc Logo" />
+            <img class="logo--dark" src="Images/htiLogo_dark.png" alt="High Tech Inc Dark Mode Logo" aria-hidden="true" />
+          </a>
+        </div>
 
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="products.html">Products and Services</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="event.html">Events/News</a></li>
+        <label class="switch" id="theme-switcher" aria-label="Toggle dark mode">
+          <input type="checkbox" id="theme-switch" />
+          <span class="slider" aria-hidden="true"></span>
+          <span class="switch-text" id="theme-switch-text">Dark</span>
+        </label>
+
+        <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+      </div>
+
+      <ul class="nav-links" role="menubar">
+        <li class="dropdown" role="none">
+          <a href="products.html" role="menuitem" aria-haspopup="true" aria-expanded="false">
+            Products and Services
+          </a>
+          <ul class="dropdown-menu" role="menu" aria-label="Products submenu">
+            <li role="none"><a role="menuitem" href="hydrophone.html">Hydrophones</a></li>
+            <li role="none"><a role="menuitem" href="cncMachiningServices.html">CNC Machining</a></li>
+            <li role="none"><a role="menuitem" href="array.html">Arrays</a></li>
+            <li role="none"><a role="menuitem" href="acousticSources.html">Acoustic Systems</a></li>
+            <li role="none"><a role="menuitem" href="DataAcquisitionSystems.html">Data Acquisition Systems</a></li>
+            <li role="none"><a role="menuitem" href="contractManufacturing.html">Contract Manufacturing</a></li>
+          </ul>
+        </li>
+        <li class="dropdown" role="none">
+          <a href="about.html" role="menuitem" aria-haspopup="true" aria-expanded="false">Company</a>
+          <ul class="dropdown-menu" role="menu" aria-label="Company submenu">
+            <li role="none"><a role="menuitem" href="about.html">About Us</a></li>
+            <li role="none"><a role="menuitem" href="contact.html">Contact</a></li>
+            <li role="none"><a role="menuitem" href="event.html">Events/News</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <section class="hero hero--compact">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <h1>Contact</h1>
+        <p>Tell us what you need.</p>
+        <div class="hero-bullets">
+          <span>Engineering-first</span>
+          <span>FACT</span>
+          <span>FACT</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick contact cards -->
+  <section class="features" style="padding-block:2.5rem">
+    <div class="container feature-grid">
+      <article class="card">
+        <h3>Email</h3>
+        <p><a class="contact-link" href="mailto:info@example.com">hightechinc@att.net</a></p>
+        <p class="muted">Best for quotes, specs, and attachments.</p>
+      </article>
+      <article class="card">
+        <h3>Phone</h3>
+        <p><a class="contact-link" href="tel:+15551234567">(228) 868-6632</a></p>
+        <p class="muted">Mon–Fri, 8:00–5:00 CT.</p>
+      </article>
+      <article class="card">
+        <h3>Address</h3>
+        <p>21120 Johnoson Rd.<br>Long Beach, MS 39560</p>
+        <p class="muted">Visits by appointment.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Form + details -->
+  <main class="contact-main">
+    <div class="container contact-grid">
+      <!-- Form -->
+      <section class="card">
+        <h2>Start a Project</h2>
+        <p class="muted">Required fields are marked.</p>
+
+        <!-- Replace action  -->
+        <form class="contact-form" action="https://formspree.io/f/your-id" method="POST" enctype="multipart/form-data" novalidate>
+          <!-- spam honeypot -->
+          <div class="hp" aria-hidden="true">
+            <label>Leave this field empty</label>
+            <input type="text" name="website" tabindex="-1" autocomplete="off">
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="name">Name *</label>
+              <input id="name" name="name" type="text" required autocomplete="name" />
+            </div>
+            <div class="field">
+              <label for="company">Organization</label>
+              <input id="company" name="company" type="text" autocomplete="organization" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="email">Email *</label>
+              <input id="email" name="email" type="email" required autocomplete="email" />
+            </div>
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="project">Project Type *</label>
+              <select id="project" name="project" required>
+                <option value="" selected disabled>Select one</option>
+                <option>Hydrophones</option>
+                <option>Acoustic Systems</option>
+                <option>Data Acquisition Systems</option>
+                <option>Arrays</option>
+                <option>CNC Machining</option>
+                <option>Contract Manufacturing</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="attachment">Attachment</label>
+              <input id="attachment" name="attachment" type="file" accept=".pdf,.png,.jpg,.jpeg,.xlsx,.csv" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+            </div>
+            
+            <div class="field">
+              
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="message">Project Details *</label>
+            <textarea id="message" name="message" rows="6" required
+              placeholder="Key specs, environment, constraints, success criteria."></textarea>
+          </div>
+
+          <div class="form-actions">
+            <button class="btn btn-primary" type="submit">Send</button>
+            <a class="btn btn-secondary" href="mailto:info@example.com">Email Instead</a>
+          </div>
+
+          <!-- optional hidden fields common with third-party processors -->
+          <input type="hidden" name="_subject" value="New inquiry from website">
+          <div class="form-status" role="status" aria-live="polite"></div>
+        </form>
+      </section>
+
+      <!-- Direct contact / FAQs -->
+      <aside class="card">
+        <h2>What to Include</h2>
+        <ul class="checklist">
+          <li>Specifics for custom jobs</li>
         </ul>
-        
-        <h1>For questions about our services, products, or company:</h1>
-        <form action="" method="get">
-            <label for="name">Name:</label>
-            <input type="text" name="name" id="name" required />
-        </form>
-        <!--- ask about application form. do they want people to
-        keep manually emailing them or do they want a contact form where
-        they add their resume and application form with other information.
-        Same thing for the questions or comments-->
-        <h1>Interested in being apart of our team?</h1>
-        <p>At High Tech, Inc. we are always looking for qualified, prospective employees.
-            If you are interested in joining our professional team please inquire by e-mailing
-            your resume and electronically fillable Employment Application PDF found here to
-            high_techinc@bellsouth.net. The Employment Application can also be printed to fill
-            out by hand, then scanned and emailed.
-        </p>
-        <form action="" method="get">
-            <label for="name"
-        </form>
+
+        <h3>Response Time</h3>
+        <p class="muted">Most requests get a reply within {} business day[s].</p>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img class="logo--light" src="Images/htiLogo_dark.png" alt="High Tech Inc Dark Mode Logo" />
+        <img class="logo--dark" src="Images/htiLogo_dark.png" alt="High Tech Inc Dark Mode Logo" aria-hidden="true" />
+        <p>Precision hydrophones and acoustic systems.</p>
+      </div>
+      <div>
+        <h4>Products and Services</h4>
+        <ul>
+          <li><a href="array.html">Arrays</a></li>
+          <li><a href="hydrophone.html">Hydrophones</a></li>
+          <li><a href="cncMachiningServices.html">CNC Machining</a></li>
+          <li><a href="products.html">All Products</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="event.html">Events/News</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <small>© <span id="year"></span> High Tech Inc. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <script src="main.js" defer></script>
+  <script>
+    // Optional: show a basic status message after native validation passes
+    document.querySelector('.contact-form')?.addEventListener('submit', (e) => {
+      const form = e.currentTarget;
+      if (!form.checkValidity()) return; // let browser show validation
+      const s = form.querySelector('.form-status');
+      if (s) s.textContent = 'Submitting…';
+    });
+  </script>
+</body>
 </html>
+s
