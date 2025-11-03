@@ -1,69 +1,232 @@
 <!DOCTYPE html>
-
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" />
-        <title></title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Data Acquisition Systems | High Tech Inc</title>
+  <script src="theme-init.js"></script>
+  <link rel="stylesheet" href="stylesheethome.css" />
+</head>
+<body>
 
-    <body>
-        <img src="Images/htiLogo.png" alt="High Tech Inc Logo">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="products.html">Products and Services</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="event.html">Events/News</a></li>
+  <!-- Navbar -->
+  <nav class="navbar" role="navigation" aria-label="Main">
+    <div class="container">
+      <div class="navbar-top">
+        <div class="logo">
+          <a href="index.html" aria-label="Home">
+            <img class="logo--light" src="Images/htiLogo.png" alt="High Tech Inc Logo" />
+            <img class="logo--dark" src="Images/htiLogo_dark.png" alt="High Tech Inc Dark Mode Logo" aria-hidden="true" />
+          </a>
+        </div>
+
+        <label class="switch" id="theme-switcher" aria-label="Toggle dark mode">
+          <input type="checkbox" id="theme-switch" />
+          <span class="slider" aria-hidden="true"></span>
+          <span class="switch-text" id="theme-switch-text">Dark</span>
+        </label>
+
+        <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+      </div>
+
+      <ul class="nav-links" role="menubar">
+        <li class="dropdown" role="none">
+          <a href="products.html" role="menuitem" aria-haspopup="true" aria-expanded="false">
+            Products and Services
+          </a>
+          <ul class="dropdown-menu" role="menu" aria-label="Products submenu">
+            <li role="none"><a role="menuitem" href="hydrophone.html">Hydrophones</a></li>
+            <li role="none"><a role="menuitem" href="cncMachiningServices.html">CNC Machining</a></li>
+            <li role="none"><a role="menuitem" href="array.html">Arrays</a></li>
+            <li role="none"><a role="menuitem" href="acousticSources.html">Acoustic Systems</a></li>
+            <li role="none"><a role="menuitem" href="DataAcquisitionSystems.html">Data Acquisition Systems</a></li>
+            <li role="none"><a role="menuitem" href="contractManufacturing.html">Contract Manufacturing</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown" role="none">
+          <a href="about.html" role="menuitem" aria-haspopup="true" aria-expanded="false">Company</a>
+          <ul class="dropdown-menu" role="menu" aria-label="Company submenu">
+            <li role="none"><a role="menuitem" href="about.html">About Us</a></li>
+            <li role="none"><a role="menuitem" href="contact.html">Contact</a></li>
+            <li role="none"><a role="menuitem" href="event.html">Events/News</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <section class="hero hero--compact">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <h1>Data Acquisition Systems</h1>
+        <p>
+          Autonomous and cabled systems for marine seismic and acoustic missions—built for
+          reliability, clean data, and full-ocean deployments.
+        </p>
+        <div class="hero-bullets">
+          <span>Up to 96+ channels</span>
+          <span>Up to 50 kHz bandwidth</span>
+          <span>24-bit ADCs</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Highlights -->
+  <section class="features" style="padding-block:2.5rem">
+    <div class="container">
+      <h2>Why Our DAS</h2>
+      <p class="subhead">Straightforward hardware, low noise floor, field-proven packaging.</p>
+
+      <div class="feature-grid">
+        <article class="card">
+          <div class="icon">⚙</div>
+          <h3>Ruggedized</h3>
+          <p>Sealed enclosures and pressure-tolerant components for seafloor or buoy deployments.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon">⇆</div>
+          <h3>Flexible I/O</h3>
+          <p>Match hydrophones, preamps, timing, and sync to your mission profile.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon">◎</div>
+          <h3>Low Noise</h3>
+          <p>Quiet front-ends and 24-bit converters for high dynamic range measurements.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon">✓</div>
+          <h3>Configurable Power</h3>
+          <p>Battery or shore power, duty-cycle control, and endurance tuning.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Catalog -->
+  <section id="catalog" class="features">
+    <div class="container">
+      <h2>Systems Catalog</h2>
+      <p class="subhead">Duplicate these cards and wire them to product pages as you create them.</p>
+
+      <div class="feature-grid">
+        <article class="card">
+          <h3>Modular Recording System</h3>
+          <p>Stackable channels, serviceable modules, and portable packaging.</p>
+          <ul class="link-list">
+            <li><a href="MRS.html">View Page</a></li>
+            <li><a href="contact.html">Request a Quote</a></li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Digital Array System</h3>
+          <p>Distributed digitizers at the sensor for minimal analog run length.</p>
+          <ul class="link-list">
+            <li><a href="DigitalArray.html">View Page</a></li>
+            <li><a href="contact.html">Request a Quote</a></li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>RAMB System</h3>
+          <p>Reliable autonomous multi-channel recorder for long-duration seabed work.</p>
+          <ul class="link-list">
+            <li><a href="RAMB.html">View Page</a></li>
+            <li><a href="contact.html">Request a Quote</a></li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>POEMS-A System</h3>
+          <p>Programmable oceanic event monitoring system with precise timing.</p>
+          <ul class="link-list">
+            <li><a href="POEMS-A.html">View Page</a></li>
+            <li><a href="contact.html">Request a Quote</a></li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Wideband Acoustic System</h3>
+          <p>High-frequency capture up to 50 kHz with matched channels.</p>
+          <ul class="link-list">
+            <li><a href="WidebandAcoustic.html">View Page</a></li>
+            <li><a href="contact.html">Request a Quote</a></li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Applications (split) -->
+  <section class="split">
+    <div class="container split-grid">
+      <div class="split-media" aria-hidden="true">
+        <div class="media-placeholder">Placeholder Image</div>
+      </div>
+      <div class="split-copy">
+        <h2>Sample Applications</h2>
+        <ul class="checklist">
+          <li>Ambient noise measurements</li>
+          <li>Marine mammal detection and monitoring</li>
+          <li>Signal/noise field characterization</li>
+          <li>Active-source acoustic and seismic studies</li>
         </ul>
+        <p class="muted">Specify channels, sample rate, depth/pressure, storage, and endurance targets.</p>
+      </div>
+    </div>
+  </section>
 
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container cta-grid">
+      <div>
+        <h2>Not sure which system fits?</h2>
+        <p></p>
+      </div>
+      <div class="cta-actions">
+        <a class="btn btn-primary" href="contact.html">Contact Engineering</a>
+        <a class="btn btn-secondary" href="products.html">Browse All Products</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img class="logo--light" src="Images/htiLogo_dark.png" alt="High Tech Inc Dark Mode Logo" />
+        <img class="logo--dark" src="Images/htiLogo_dark.png" alt="High Tech Inc Dark Mode Logo" aria-hidden="true" />
+        <p>Precision hydrophones and acoustic systems.</p>
+      </div>
+      <div>
+        <h4>Products and Services</h4>
         <ul>
-            <li>Hydrophones</li>   
-            <li>Data Acquisition Systems</li>
-            <li>Acoustic Systems</li>
-            <li>Contract Manufacturing</li>
-            <li>Arrays</li>
+          <li><a href="array.html">Arrays</a></li>
+          <li><a href="hydrophone.html">Hydrophones</a></li>
+          <li><a href="cncMachiningServices.html">CNC Machining</a></li>
+          <li><a href="products.html">All Products</a></li>
         </ul>
-
+      </div>
+      <div>
+        <h4>Company</h4>
         <ul>
-            <li>Modular Recording System</li>
-            <li>Digital Array System</li>
-            <li>RAMB System</li>
-            <li>POEMS-A System</li>
-            <li>Wideband Acoustic System</li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="event.html">Events/News</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <small>© <span id="year"></span> High Tech Inc. All rights reserved.</small>
+    </div>
+  </footer>
 
-        <h1>High Tech, Inc. has developed and manufactured autonomous data 
-            acquisition systems for recording marine seismic data using vertical
-            or horizontal bottom-mounted cables.
-        </h1>
-
-        <!---Features of data acquisition systems-->
-        <ul>
-            <li>Wide bandwith up to 50 kHz</li>
-            <li>High channel count up to 96</li>
-            <li>Surface buoy or seadloor operation</li>
-            <li>Low noise</li>
-            <li>Battery or shore power supply options</li>
-            <li>24-bit A/D converters</li>
-        </ul>
-
-        <!--
-        Description of customization for product from original website
-        Flexibility is built into the design. Systems may be customized to suit a wide 
-        variety of data acquition requirements. The recording systems are compact.
-        No special handling equipment is recquired.
-        -->
-
-        <figure>
-            <figcaption>Sample Applications</figcaption>
-            <ul>
-                <li>Ambient noise measurements</li>
-                <li>Marine mammal detection and monitoring</li>
-                <li>Signal/ noise field characterization</li>
-                <li>Active source acoustic and seismic studies</li>
-            </ul>
-        </figure>
-    </body>
+  <script src="main.js" defer></script>
+</body>
 </html>

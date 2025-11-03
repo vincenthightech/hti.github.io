@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>POEMS-A System | High Tech Inc</title>
+  <script src="theme-init.js"></script>
+  <link rel="stylesheet" href="stylesheethome.css" />
+</head>
+<body>
+  <!-- Navbar identical -->
+  <nav class="navbar" role="navigation" aria-label="Main">
+    <div class="container">
+      <div class="navbar-top">
+        <div class="logo">
+          <a href="index.html" aria-label="Home">
+            <img class="logo--light" src="Images/htiLogo.png" alt="High Tech Inc Logo" />
+            <img class="logo--dark" src="Images/htiLogo_dark.png" alt="High Tech Inc Dark Mode Logo" aria-hidden="true" />
+          </a>
+        </div>
+        <label class="switch" aria-label="Toggle dark mode">
+          <input type="checkbox" id="theme-switch" />
+          <span class="slider"></span>
+          <span class="switch-text" id="theme-switch-text">Dark</span>
+        </label>
+        <button class="menu-toggle" aria-expanded="false">☰</button>
+      </div>
+      <ul class="nav-links" role="menubar">
+        <li class="dropdown">
+          <a href="products.html" role="menuitem">Products and Services</a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="hydrophone.html">Hydrophones</a></li>
+            <li><a href="cncMachiningServices.html">CNC Machining</a></li>
+            <li><a href="array.html">Arrays</a></li>
+            <li><a href="acousticSources.html">Acoustic Systems</a></li>
+            <li><a href="DataAcquisitionSystems.html">Data Acquisition Systems</a></li>
+            <li><a href="contractManufacturing.html">Contract Manufacturing</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="about.html" role="menuitem">Company</a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="event.html">Events/News</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <div class="container">
+      <a href="index.html">Home</a><span aria-hidden="true">›</span>
+      <a href="DataAcquisitionSystems.html">Data Acquisition Systems</a><span aria-hidden="true">›</span>
+      <span class="current" aria-current="page">POEMS-A System</span>
+    </div>
+  </nav>
+
+  <header class="product-hero">
+    <div class="container product-hero-grid">
+      <div class="product-hero-copy">
+        <h1>POEMS-A System</h1>
+        <p class="lede">Programmable oceanic event monitoring system with precise timing and trigger logic.</p>
+        <ul class="kv-bullets">
+          <li>Event-driven capture</li>
+          <li>Low power standby</li>
+          <li>High-accuracy timing</li>
+        </ul>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="contact.html">Request Quote</a>
+          <a class="btn btn-secondary" href="pdf/POEMS-A-datasheet.pdf">Datasheet</a>
+        </div>
+      </div>
+      <div class="product-hero-media">
+        <img id="product-main-img" src="Images/das/poems/main.png" alt="POEMS-A System">
+        <div class="thumb-row">
+          <button class="thumb"><img src="Images/das/poems/main.png" alt=""></button>
+          <button class="thumb"><img src="Images/das/poems/logic.png" alt=""></button>
+          <button class="thumb"><img src="Images/das/poems/deploy.png" alt=""></button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="product-body">
+    <div class="container product-grid">
+      <section class="card">
+        <h2>Overview</h2>
+        <p>Describe trigger conditions, standby power modes, and how events are timestamped and stored.</p>
+
+        <h3>Applications</h3>
+        <ul class="checklist">
+          <li>Transient signal capture</li>
+          <li>Threshold-based monitoring</li>
+          <li>Autonomous event logging</li>
+        </ul>
+
+        <h3>What’s Included</h3>
+        <ul class="checklist">
+          <li>POEMS-A controller/logger</li>
+          <li>Sensor interface harness</li>
+          <li>Configuration utility</li>
+        </ul>
+
+        <h3>Options & Accessories</h3>
+        <ul class="checklist">
+          <li>Trigger logic modules</li>
+          <li>External sync inputs</li>
+          <li>Extended endurance packs</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Specifications</h2>
+        <table class="spec-table">
+          <tbody>
+            <tr><th>Channels</th><td>4–16</td></tr>
+            <tr><th>Trigger Modes</th><td>Level, window, slope, external</td></tr>
+            <tr><th>Sample Rate</th><td>Up to 96 kS/s</td></tr>
+            <tr><th>Resolution</th><td>24-bit</td></tr>
+            <tr><th>Timing</th><td>GNSS/PTP; timestamp accuracy ±X µs</td></tr>
+            <tr><th>Standby Power</th><td>&lt; X mW</td></tr>
+            <tr><th>Depth Rating</th><td>Up to NNNN m</td></tr>
+            <tr><th>Storage</th><td>Up to 4 TB</td></tr>
+          </tbody>
+        </table>
+
+        <h3>Documents</h3>
+        <ul class="download-list">
+          <li><a href="pdf/POEMS-A-datasheet.pdf">Datasheet (PDF)</a></li>
+          <li><a href="pdf/POEMS-A-drawing.pdf">Outline Drawing (PDF)</a></li>
+          <li><a href="pdf/POEMS-A-calibration.pdf">Sample Channel Calibration (PDF)</a></li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="container" style="padding-block:1rem">
+      <a class="btn btn-secondary" href="DataAcquisitionSystems.html">← Back to Data Acquisition Systems</a>
+    </div>
+  </main>
+
+  <footer> <!-- standard footer --> 
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img class="logo--light" src="Images/htiLogo_dark.png" alt="High Tech Inc Dark Mode Logo" />
+        <img class="logo--dark" src="Images/htiLogo_dark.png" alt="High Tech Inc Dark Mode Logo" aria-hidden="true" />
+        <p>Precision hydrophones and acoustic systems.</p>
+      </div>
+      <div>
+        <h4>Products and Services</h4>
+        <ul>
+          <li><a href="array.html">Arrays</a></li>
+          <li><a href="hydrophone.html">Hydrophones</a></li>
+          <li><a href="cncMachiningServices.html">CNC Machining</a></li>
+          <li><a href="products.html">All Products</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="event.html">Events/News</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <small>© <span id="year"></span> High Tech Inc. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <script src="main.js" defer></script>
+  <script>
+    document.addEventListener('click', (e) => {
+      const btn = e.target.closest('.thumb');
+      if (!btn) return;
+      const img = btn.querySelector('img');
+      const main = document.getElementById('product-main-img');
+      if (img && main) main.src = img.src;
+    });
+  </script>
+</body>
+</html>

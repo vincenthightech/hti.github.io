@@ -1,30 +1,244 @@
 <!DOCTYPE html>
-
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" />
-        <title></title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contract Manufacturing | High Tech Inc</title>
+  <script src="theme-init.js"></script>
+  <link rel="stylesheet" href="stylesheethome.css" />
+</head>
+<body>
 
-    <body>
-        <img src="Images/htiLogo.png" alt="High Tech Inc Logo">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="products.html">Products and Services</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="event.html">Events/News</a></li>
+  <!-- Navbar -->
+  <nav class="navbar" role="navigation" aria-label="Main">
+    <div class="container">
+      <div class="navbar-top">
+        <div class="logo">
+          <a href="index.html" aria-label="Home">
+            <img class="logo--light" src="Images/htiLogo.png" alt="High Tech Inc Logo" />
+            <img class="logo--dark" src="Images/htiLogo_dark.png" alt="High Tech Inc Dark Mode Logo" aria-hidden="true" />
+          </a>
+        </div>
+
+        <label class="switch" id="theme-switcher" aria-label="Toggle dark mode">
+          <input type="checkbox" id="theme-switch" />
+          <span class="slider" aria-hidden="true"></span>
+          <span class="switch-text" id="theme-switch-text">Dark</span>
+        </label>
+
+        <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+      </div>
+
+      <ul class="nav-links" role="menubar">
+        <li class="dropdown" role="none">
+          <a href="products.html" role="menuitem" aria-haspopup="true" aria-expanded="false">
+            Products and Services
+          </a>
+          <ul class="dropdown-menu" role="menu" aria-label="Products submenu">
+            <li role="none"><a role="menuitem" href="hydrophone.html">Hydrophones</a></li>
+            <li role="none"><a role="menuitem" href="cncMachiningServices.html">CNC Machining</a></li>
+            <li role="none"><a role="menuitem" href="array.html">Arrays</a></li>
+            <li role="none"><a role="menuitem" href="acousticSources.html">Acoustic Systems</a></li>
+            <li role="none"><a role="menuitem" href="DataAcquisitionSystems.html">Data Acquisition Systems</a></li>
+            <li role="none"><a role="menuitem" href="contractManufacturing.html">Contract Manufacturing</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown" role="none">
+          <a href="about.html" role="menuitem" aria-haspopup="true" aria-expanded="false">Company</a>
+          <ul class="dropdown-menu" role="menu" aria-label="Company submenu">
+            <li role="none"><a role="menuitem" href="about.html">About</a></li>
+            <li role="none"><a role="menuitem" href="contact.html">Contact</a></li>
+            <li role="none"><a role="menuitem" href="event.html">Events/News</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <section class="hero hero--compact">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <h1>Contract Manufacturing</h1>
+        <p>Build to print. Build to spec. Sensor electronics, assemblies, molding, and machined parts under documented quality control.</p>
+        <div class="hero-bullets">
+          <span>Electronic & mechanical assembly</span>
+          <span>Polyurethane & compression molding</span>
+          <span>Machine shop & array shop</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Capability highlights -->
+  <section class="features" style="padding-block:2.5rem">
+    <div class="container">
+      <h2>What We Do</h2>
+      <p class="subhead">Straightforward manufacturing with traceable processes and acceptance testing.</p>
+
+      <div class="feature-grid">
+        <article class="card">
+          <div class="icon">⚙</div>
+          <h3>Electronic Assembly</h3>
+          <p>Through-hole and mixed-tech builds, conformal coat, and functional test.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon">🧩</div>
+          <h3>Mechanical Assembly</h3>
+          <p>Sensor cartridges, pressure housings, cable terminations, strain relief.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon">◼</div>
+          <h3>Polyurethane Molding</h3>
+          <p>Overmolds and encapsulation for subsea connectors and cable junctions.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon">⬢</div>
+          <h3>Compression Molding</h3>
+          <p>Repeatable elastomer parts for acoustic packages and seals.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon">🛠</div>
+          <h3>Machine Shop</h3>
+          <p>CNC turning/milling for fixtures, clamps, housings, and adapters.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon">◎</div>
+          <h3>Array Shop</h3>
+          <p>Multi-channel harnessing, potting, and verification for hydrophone arrays.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services catalog (duplicate/rename as you add detail pages) -->
+  <section id="catalog" class="features">
+    <div class="container">
+      <h2>Services</h2>
+      <p class="subhead">Duplicate these cards and wire them to dedicated pages as needed.</p>
+
+      <div class="feature-grid">
+        <article class="card">
+          <h3>Electronic Assembly</h3>
+          <p>Sensor node electronics, preamps, and controller builds with acceptance test.</p>
+          <ul class="link-list">
+            <li><a href="contact.html">Request a Quote</a></li>
+            <li><a href="#">Process Sheet (PDF)</a></li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Mechanical Assembly</h3>
+          <p>Cartridge assembly, sealing, torque/spec verification, documentation.</p>
+          <ul class="link-list">
+            <li><a href="contact.html">Request a Quote</a></li>
+            <li><a href="#">Process Sheet (PDF)</a></li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Polyurethane & Compression Molding</h3>
+          <p>Tooling, overmolds, and encapsulation tested for pressure and adhesion.</p>
+          <ul class="link-list">
+            <li><a href="contact.html">Request a Quote</a></li>
+            <li><a href="#">Materials List (PDF)</a></li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Machine Shop</h3>
+          <p>CNC parts in aluminum, stainless, and polymers with inspection reports.</p>
+          <ul class="link-list">
+            <li><a href="contact.html">Request a Quote</a></li>
+            <li><a href="#">Capabilities (PDF)</a></li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Array Shop</h3>
+          <p>Harnessing, potting, and verification for vertical/bottom/deep-towed arrays.</p>
+          <ul class="link-list">
+            <li><a href="contact.html">Request a Quote</a></li>
+            <li><a href="#">Work Instructions (PDF)</a></li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quality split -->
+  <section class="split">
+    <div class="container split-grid">
+      <div class="split-media" aria-hidden="true">
+        <div class="media-placeholder">Shop floor / molding fixture photo</div>
+      </div>
+      <div class="split-copy">
+        <h2>Quality & Compliance</h2>
+        <p>We build under documented procedures and control plans with traceable equipment calibration.</p>
+        <ul class="checklist">
+          <li>MIL-I-45208A</li>
+          <li>IPC-A-610 Class 2 & 3 Inspection</li>
+          <li>ESD Controls</li>
+          <li>Equipment Calibration Control</li>
+          <li>Process Control</li>
+          <li>Product Acceptance Testing</li>
+          <li>Engineering & Test Documentation</li>
         </ul>
+      </div>
+    </div>
+  </section>
 
-        <!--
-        High Tech, Inc. provides contract manufacturing services which include manufacturing
-        of sensor node electronics, sensor cartridge assembly, and polyurethane / compression
-        molding.
-        Manufacturing Capabilities:
-        Electronic Assembly, Mechanical Assembly, Polyurethane Molding,
-        Compression Molding, Machine Shop, Array Shop
-        -->
-    </body>
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container cta-grid">
+      <div>
+        <h2>Send the drawing package.</h2>
+        <p>Include quantities, materials, finishes, test requirements, and delivery target. We’ll respond with a firm quote.</p>
+      </div>
+      <div class="cta-actions">
+        <a class="btn btn-primary" href="contact.html">Contact Engineering</a>
+        <a class="btn btn-secondary" href="products.html">Browse All Products</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img class="logo--light" src="Images/htiLogo_dark.png" alt="High Tech Inc Dark Mode Logo" />
+        <img class="logo--dark" src="Images/htiLogo_dark.png" alt="High Tech Inc Dark Mode Logo" aria-hidden="true" />
+        <p>Precision hydrophones and acoustic systems.</p>
+      </div>
+      <div>
+        <h4>Products and Services</h4>
+        <ul>
+          <li><a href="array.html">Arrays</a></li>
+          <li><a href="hydrophone.html">Hydrophones</a></li>
+          <li><a href="cncMachiningServices.html">CNC Machining</a></li>
+          <li><a href="products.html">All Products</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="event.html">Events/News</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <small>© <span id="year"></span> High Tech Inc. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <script src="main.js" defer></script>
+</body>
 </html>
