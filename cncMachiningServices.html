@@ -6,9 +6,69 @@
   <title>CNC Machining Services | High Tech Inc</title>
   <script src="theme-init.js"></script>
   <link rel="stylesheet" href="stylesheethome.css" />
-</head>
-<body>
 
+  <!-- Page-scoped add-ons (safe for the rest of the site) -->
+  <style>
+    .page-cnc section[id] { scroll-margin-top: 96px; }
+
+    /* Sticky subnav */
+    .page-cnc .cnc-subnav {
+      position: sticky; top: 64px; z-index: 40;
+      background: var(--card); border-bottom: 1px solid var(--border);
+    }
+    .page-cnc .cnc-subnav .container {
+      display: flex; gap: 1rem; overflow-x: auto; padding-block: .5rem;
+    }
+    .page-cnc .cnc-subnav a {
+      white-space: nowrap; text-decoration: none; font-weight: 600;
+      color: #0f172a; padding: .5rem .75rem; border-radius: 8px;
+      border: 1px solid transparent; transition: background .15s, border-color .15s;
+    }
+    .page-cnc .cnc-subnav a:hover { background: #eef9fa; border-color: #d1f3f6; }
+    :root[data-theme="dark"] .page-cnc .cnc-subnav { background: var(--card); }
+    :root[data-theme="dark"] .page-cnc .cnc-subnav a { color: var(--text); }
+    :root[data-theme="dark"] .page-cnc .cnc-subnav a:hover {
+      background: rgba(0,194,203,.08); border-color: var(--border);
+    }
+
+    /* At-a-glance stats */
+    .page-cnc .stat-row {
+      background: #f2fbfc; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      padding: 1rem 0;
+    }
+    :root[data-theme="dark"] .page-cnc .stat-row { background: #0e171c; }
+    .page-cnc .stat-grid {
+      display: grid; gap: .75rem;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+    }
+    @media (min-width: 900px){ .page-cnc .stat-grid { grid-template-columns: repeat(4, minmax(0,1fr)); } }
+    .page-cnc .stat {
+      background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: .9rem;
+    }
+    .page-cnc .stat .k { font-size: 1.1rem; font-weight: 700; color: var(--brand); }
+    .page-cnc .stat .l { font-size: .9rem; color: var(--muted); margin-top: .15rem; }
+
+    /* Materials accordion inside cards */
+    .page-cnc details.card > summary {
+      list-style: none; cursor: pointer; user-select: none; display: flex; align-items: center;
+    }
+    .page-cnc details.card > summary::-webkit-details-marker { display: none; }
+    .page-cnc details.card > summary h3 { margin: 0; flex: 1; }
+    .page-cnc details.card > summary::after {
+      content: "▾"; margin-left: .5rem; transform: rotate(-90deg); transition: transform .15s ease;
+      color: var(--muted);
+    }
+    .page-cnc details[open].card > summary::after { transform: rotate(0deg); }
+
+    /* Tighten product-like grids here without touching global */
+    .page-cnc .feature-grid { align-items: start; }
+
+    /* Spec table small notes */
+    .page-cnc .muted { color: var(--muted); font-size: .95rem; }
+  </style>
+</head>
+
+<body class="page-cnc">
   <!-- Navbar -->
   <nav class="navbar" role="navigation" aria-label="Main">
     <div class="container">
@@ -19,21 +79,17 @@
             <img class="logo--dark" src="Images/htiLogo_dark.png" alt="High Tech Inc Dark Mode Logo" aria-hidden="true" />
           </a>
         </div>
-
         <label class="switch" id="theme-switcher" aria-label="Toggle dark mode">
           <input type="checkbox" id="theme-switch" />
           <span class="slider" aria-hidden="true"></span>
           <span class="switch-text" id="theme-switch-text">Dark</span>
         </label>
-
         <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
       </div>
 
       <ul class="nav-links" role="menubar">
         <li class="dropdown" role="none">
-          <a href="products.html" role="menuitem" aria-haspopup="true" aria-expanded="false">
-            Products and Services
-          </a>
+          <a href="products.html" role="menuitem" aria-haspopup="true" aria-expanded="false">Products and Services</a>
           <ul class="dropdown-menu" role="menu" aria-label="Products submenu">
             <li role="none"><a role="menuitem" href="hydrophone.html">Hydrophones</a></li>
             <li role="none"><a role="menuitem" href="cncMachiningServices.html">CNC Machining</a></li>
@@ -43,7 +99,6 @@
             <li role="none"><a role="menuitem" href="contractManufacturing.html">Contract Manufacturing</a></li>
           </ul>
         </li>
-
         <li class="dropdown" role="none">
           <a href="about.html" role="menuitem" aria-haspopup="true" aria-expanded="false">Company</a>
           <ul class="dropdown-menu" role="menu" aria-label="Company submenu">
@@ -56,35 +111,32 @@
     </div>
   </nav>
 
-  <!-- Header -->
+  <!-- Hero -->
   <section class="hero hero--compact">
     <div class="container hero-grid">
       <div class="hero-copy">
         <h1>CNC Machining Services</h1>
-          <p>
-            Our capabilities have been expanded to include a full service in-house machine shop equipped with modern CNC machine tools and technology. 
-            Our machine shop produces the tooling and components used in out products as well as custom parts on a contract manufacturing basis. With 
-            advanced CNC machine tools, dedicated engineering & quality departments, and decades of experience in the subsea industry, High Tech, Inc. is
-            uniquely positioned to provide quality designed and machined parts to our customers.
-          </p>
+        <p>
+          In-house CNC turning and milling for prototypes and production. Tight tolerances, clean finishes, and
+          documented inspection for subsea and industrial applications.
+        </p>
         <div class="hero-bullets">
-          <span>Turning & Milling</span>
-          <span>Rotary/4-Axis</span>
-          <span>In-house Inspection</span>
+          <span>Turning & 3/4-Axis Milling</span>
+          <span>Aluminum • Stainless • Titanium • Plastics</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Capability overview -->
-  <section class="features" style="padding-block:2.5rem">
+
+  <!-- Capabilities -->
+  <section id="capabilities" class="features" style="padding-block:2.5rem">
     <div class="container">
       <h2>Capabilities</h2>
       <p class="subhead">Core processes and supporting services.</p>
 
       <div class="feature-grid">
         <article class="card">
-          
           <h3>CNC Turning</h3>
           <ul class="checklist">
             <li>Standard 2-Axis</li>
@@ -95,7 +147,6 @@
         </article>
 
         <article class="card">
-          
           <h3>CNC Milling</h3>
           <ul class="checklist">
             <li>3-Axis</li>
@@ -105,49 +156,202 @@
         </article>
 
         <article class="card">
-          
           <h3>Design Assistance</h3>
           <ul class="checklist">
-            <li>Dedicated Full Time Engineering Department</li>
-            <li>Design Advice</li>
             <li>Drawing Creation</li>
-            <li>Design for Manufacturability</li>
-            <li>CAD/CAM Integration</li>
+            <li>CAD/CAM integration</li>
+            <li>Design Advice</li>
           </ul>
         </article>
 
         <article class="card">
-          
-          <h3>Quality</h3>
+          <h3>Additional Capabilities</h3>
           <ul class="checklist">
-            <li>Dedicated full-time quality department</li>
-            <li>Automated vision measurement systems</li>
-            <li>White-light interferometry surface measurement</li>
+            <li>Laser Marking</li>
+            <li>Media Blasting</li>
           </ul>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- Split: materials & tolerances -->
-  <section class="split">
+  <section id="components" class="split" style="padding-block:2.5rem">
+  <div class="container split-grid">
+    <!-- Left: list of six items, no descriptions -->
+    <div class="component-wrap">
+      <div class="component-card">
+        <h2>Typical Components</h2>
+        <ul class="component-list">
+          <li class="component-item">Pressure Housings & Endcaps</li>
+          <li class="component-item">Mounts & Brackets</li>
+          <li class="component-item">Connector & Penetrator Hardware</li>
+          <li class="component-item">Fixtures & Tooling</li>
+          <li class="component-item">Bulkheads & Flanges</li>
+          <li class="component-item">Clamps & Collars</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Right: one image to fill whitespace -->
+    <div class="component-media" aria-hidden="true">
+      <img src="Images/components/components-hero.jpg" alt="Sample machined components">
+    </div>
+  </div>
+</section>
+
+
+
+ <section id="materials" class="features" style="padding-block:2.5rem">
+  <div class="container">
+    <h2>Materials</h2>
+
+    <div class="feature-grid">
+      <!-- Aluminum -->
+      <article class="card">
+        <h3>Aluminum 6061</h3>
+        <div class="split-grid">
+          <div aria-hidden="true">
+            <img class="material-img" src="Images/" alt="Aluminum 6061">
+          </div>
+          <div>
+            <ul class="checklist">
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <h3>Aluminum 7075</h3>
+        <div class="split-grid">
+          <div aria-hidden="true">
+            <img class="material-img" src="Images/" alt="Aluminum 7075">
+          </div>
+          <div>
+            <ul class="checklist">
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- Stainless -->
+      <article class="card">
+        <h3>Stainless Steel</h3>
+        <div class="split-grid">
+          <div aria-hidden="true">
+            <img class="material-img" src="Images/" alt="Stainless Steel">
+          </div>
+          <div>
+            <ul class="checklist">
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- Titanium -->
+      <article class="card">
+        <h3>Titanium Grade 2 & 5</h3>
+        <div class="split-grid">
+          <div aria-hidden="true">
+            <img class="material-img" src="Images/" alt="Titanium">
+          </div>
+          <div>
+            <ul class="checklist">
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- Engineering Plastics -->
+      <article class="card">
+        <h3>Polyether Ether Ketone (PEEK)</h3>
+        <div class="split-grid">
+          <div aria-hidden="true">
+            <img class="material-img" src="Images/" alt="PEEK">
+          </div>
+          <div>
+            <ul class="checklist">
+              <li>Mechanical and Chemical Resistance Properties that are Retained to High Temperatures</li>
+              <li>Highly Resistant to Thermal Degradation</li>
+              <li>Compatible with Ultra-High Vacuum Applications</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <h3>Polyoxymethylene (Acetal)</h3>
+        <div class="split-grid">
+          <div aria-hidden="true">
+            <img class="material-img" src="Images/" alt="Acetal">
+          </div>
+          <div>
+            <ul class="checklist">
+              <li>High Stiffness, Low Friction, and Excenllent Dimensional Stability</li>
+              <li>High Strength, Hardness, and Rigidity to -40C</li>
+              <li>High Performance Engineering Components</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+
+      <!-- Copper Alloys -->
+      <article class="card">
+        <h3>Brass</h3>
+        <div class="split-grid">
+          <div aria-hidden="true">
+            <img class="material-img" src="Images/" alt="Brass sample parts">
+          </div>
+          <div>
+            <ul class="checklist">
+              <li>Resistance to Corrosion</li>
+              <li>Antimicrobial</li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- Quality Assurance -->
+  <section id="quality" class="split">
     <div class="container split-grid">
       <div class="split-media" aria-hidden="true">
-        <div class="media-placeholder">Shop photo / sample parts</div>
+        <div class="media-placeholder">Placeholder Image</div>
       </div>
       <div class="split-copy">
-        <h2>Materials & Tolerances</h2>
+        <h2>Quality Assurance</h2>
+        <p>We implement stringent quality control measures throughout the manufacturing process to ensure each component meets the higest standards.</p>
         <ul class="checklist">
-          <li>Stainless Steel, Tool Steel, Titanium Grade 2 & 5, Aluminum 6061 & 7075. Brass, PEEK, and Acetal</li>
-          <li></li>
-          <li></li>
+          <li>Dedicated Full Time Quality Department</li>
+          <li>Automated Vision Measurement Machines</li>
+          <li>White Light Interferometry Surface Measurement Machine</li>
+          <li>Customized Go-No Go and Snap Guaging</li>
+          <li>Various Hand Measurement Tools and Guages</li>
         </ul>
       </div>
     </div>
   </section>
 
+
   <!-- CTA -->
-  <section class="cta">
+  <section id="quote" class="cta">
     <div class="container cta-grid">
       <div>
         <h2>Ready for a quote?</h2>

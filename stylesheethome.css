@@ -788,3 +788,113 @@ footer{ background:#06151c; color:#d1d5db; margin-top: 2rem; }
 :root[data-theme="dark"] .field textarea:focus{
   box-shadow: 0 0 0 3px rgba(0,194,203,.28);
 }
+
+/* Materials: long vertical cards, always open */
+.page-cnc #materials .feature-grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.page-cnc #materials .card{
+  width: 100%;
+  padding: 1rem 1.25rem;
+  border-radius: 14px;
+}
+
+.page-cnc #materials .card h3{
+  margin: 0 0 .25rem 0;
+  font-size: 1.1rem;
+}
+
+.page-cnc #materials .card .split-grid{
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 1rem;
+  margin-top: .5rem;
+}
+@media (max-width: 900px){
+  .page-cnc #materials .card .split-grid{ grid-template-columns: 1fr; }
+}
+
+.page-cnc #materials .material-img{
+  width: 100%;
+  max-height: 280px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+
+/* Typical Components: single image fills whitespace on the side */
+.page-cnc #components.split .component-wrap{
+  display: grid;
+  gap: 1rem;
+}
+
+.page-cnc #components .component-card{
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1rem 1.25rem;
+}
+
+.page-cnc #components .component-list{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: .6rem;
+}
+
+.page-cnc #components .component-item{
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: .75rem 1rem;
+  font-weight: 600;
+  color: var(--text);
+  transition: background .15s ease, border-color .15s ease;
+}
+.page-cnc #components .component-item:hover{
+  background: #eef9fa;
+  border-color: #d1f3f6;
+}
+:root[data-theme="dark"] .page-cnc #components .component-item:hover{
+  background: rgba(0,194,203,.08);
+  border-color: var(--border);
+}
+
+.page-cnc #components .component-media img{
+  width: 100%;
+  height: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+}
+
+/* Remove outlines/borders + hover from Typical Components */
+.page-cnc #components .component-card{
+  border: none;
+  box-shadow: none;
+}
+
+.page-cnc #components .component-item{
+  border: none;
+  background: transparent;
+}
+
+.page-cnc #components .component-item:hover{
+  background: transparent;
+  border-color: transparent;
+}
+
+:root[data-theme="dark"] .page-cnc #components .component-item:hover{
+  background: transparent;
+  border-color: transparent;
+}
+
+.page-cnc #components .component-media img{
+  border: none;
+}
