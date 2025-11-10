@@ -60,11 +60,13 @@
     <div class="container product-hero-grid">
       <div class="product-hero-copy">
         <h1>Modular Recording System (MRS)</h1>
-        <p class="lede">Stackable channels, field-serviceable modules, and portable packaging for seafloor or buoy deployments.</p>
+        <p class="lede">
+          The HTI Modular Recording System is a self-contained, autonomous recording system
+          connected to a multi-channel analalog hydrophone array.
+        </p>
         <ul class="kv-bullets">
-          <li>Modular channels</li>
-          <li>24-bit acquisition</li>
-          <li>Battery or shore power</li>
+          <li>Modular Channels</li>
+          <li>Battery or Shore Power</li>
         </ul>
         <div class="hero-ctas">
           <a class="btn btn-primary" href="contact.html">Request Quote</a>
@@ -72,10 +74,10 @@
         </div>
       </div>
       <div class="product-hero-media">
-        <img id="product-main-img" src="Images/das/mrs/main.png" alt="Modular Recording System" loading="eager" fetchpriority="high">
+        <img id="product-main-img" src="Images/mrs1.jpg" alt="Modular Recording System" loading="eager" fetchpriority="high">
         <div class="thumb-row" role="list" aria-label="Product thumbnails">
-          <button class="thumb" aria-label="Main view"><img src="Images/das/mrs/main.png" alt=""></button>
-          <button class="thumb" aria-label="Module stack"><img src="Images/das/mrs/detail-1.png" alt=""></button>
+          <button class="thumb" aria-label="Main view"><img src="Images/mrs1.jpg" alt=""></button>
+          <button class="thumb" aria-label="Module stack"><img src="Images/mrs2.jpg" alt=""></button>
           <button class="thumb" aria-label="Deployed view"><img src="Images/das/mrs/detail-2.png" alt=""></button>
         </div>
       </div>
@@ -86,54 +88,120 @@
     <div class="container product-grid">
       <section class="card">
         <h2>Overview</h2>
-        <p>Concise summary of use cases and why MRS is chosen. Note servicing approach, endurance, and scaling.</p>
+        <p>
+          The system is designed to be deployed as a buoy or on the sea floor. It features a 
+          flexible, modular design that can record between 8 and 86 hydrophone channels.
+        </p>
+        <p>
+          The recorder is made up of 1 to 6 recording modules, depending on the number of 
+          channels in the hydrophone array, controlled by the system controller. Each 
+          recording module records up to 16 channels. Each channel includes a 24-bit A/D
+          converter and supports sample rates up to 125 kHz. Each module includes data
+          storage for up to 5 days of continuous recording at the highest sample rate.
+        </p>
+        <p>
+          The system was designed with low power components to keep power consumption to 
+          a minimum. Power suppply options include: Alkaline D-Cells, Rechargeable Lithium-Ion
+          Batteries, Rechargeable Lead-Acid Batteries, or Shore Power supplied over a
+          sub-sea cable.
+        </p>
 
         <h3>Applications</h3>
         <ul class="checklist">
-          <li>Seafloor noise and event monitoring</li>
-          <li>Multi-channel seismic/acoustic surveys</li>
-          <li>Long-duration autonomous studies</li>
+          <li>Active Source Acoustic and Seismic Studies</li>
+          <li>Ambient Noise Monitoring</li>
+          <li>Noise Characterization</li>
         </ul>
 
-        <h3>What’s Included</h3>
-        <ul class="checklist">
-          <li>Recorder chassis with N channels</li>
-          <li>Battery pack(s) or power interface</li>
-          <li>Comms/Sync module and cabling</li>
-        </ul>
+        <h3>Sample Data</h3>
+        <h2>
+          Recorded at 125 kHz at the lowest gain state. Plots show spectrum
+          of 5 second data window.
+        </h2>
 
-        <h3>Options & Accessories</h3>
-        <ul class="checklist">
-          <li>Channel count: 8 / 16 / 32 / 64+</li>
-          <li>Storage: 1–16 TB</li>
-          <li>GNSS or PTP time sync</li>
-          <li>Pressure housing depth rating</li>
-        </ul>
+        <p>Channel 2 (ADgnd): Digital Electronics Noise Floor with A/D input grounded. RMS =9 µV</p>
+        <img src="Images/125kHz_10dB_ADgnd1.png">
+        <p>
+          Channel 4 (Preamplifier): System Noise Floor with Input Connected to 
+          Preamplifier (Includes digital gain and preamplifier gain). RMS = 442 µV
+        </p>
+        <img src="Images/125kHz_10dB_ADgnd1.png">
       </section>
 
       <section class="card">
         <h2>Specifications</h2>
         <table class="spec-table">
+          <h3>Analog</h3>
           <tbody>
-            <tr><th>Channels</th><td>8–64+ (modular)</td></tr>
-            <tr><th>Bandwidth</th><td>DC to 50 kHz (per channel, front-end dependent)</td></tr>
-            <tr><th>Sample Rate</th><td>1 kS/s – 192 kS/s, per channel</td></tr>
-            <tr><th>Resolution</th><td>24-bit ADC</td></tr>
-            <tr><th>Storage</th><td>Up to 16 TB removable</td></tr>
-            <tr><th>Timing</th><td>GNSS, PTP, or oven-controlled oscillator</td></tr>
-            <tr><th>Power</th><td>Battery or 100–240 VAC shore power</td></tr>
-            <tr><th>Depth Rating</th><td>Up to NNNN m (housing option)</td></tr>
-            <tr><th>Interfaces</th><td>Ethernet, USB service, trigger/sync I/O</td></tr>
-            <tr><th>Operating Temp</th><td>−20 °C to +60 °C</td></tr>
+            <tr><th>Channels</th><td>8 to 96</td></tr>
+            <tr><th>Sample Rates Supported per Channel</th><td>1953 to 125,000 Hz</td></tr>
+            <tr><th>A/D Converter</th><td>24 Bit Delta-Sigma</td></tr>
+            <tr><th>Hydrophones</th><td>High Tech, Inc. Voltage or Current Mode</td></tr>
+            <tr><th>Gain Stage Supported</th><td>
+              <div data-label="Max"><span class="val">10dB</span></div>
+              <div data-label="Max"><span class="val">22dB</span></div>
+              <div data-label="Max"><span class="val">30dB</span></div>
+              <div data-label="Max"><span class="val">40dB</span></div>
+            </td></tr>
+            <tr><th>Gain Accuracy</th><td>1% (0.1 dB)</td></tr>
+            <tr><th>Maximum Input Signal</th><td>3.2768 Volts</td></tr>
+            <tr><th>Equivalent Noise Input</th><td>32.768 µV @ 125 kHz</td></tr>
+            <tr><th>Anti-alias Filter</th><td>
+              <div data-label="Max"><span class="val">-3dB Bandwidth</span></div>
+              <div data-label="Max"><span class="val">Sample Rate *0.4096</span></div>
+            </td></tr>
+            <tr><th>Instantaneous Dynamic Range</th><td>-100 dB</td></tr>
+            <tr><th>THD</th><td>-90 dB</td></tr>
+            <tr><th>Clock Source</th><td>Internal Clock on System Controller (Optional: Time Standard, GPS)</td></tr>
           </tbody>
         </table>
-
-        <h3>Documents</h3>
-        <ul class="download-list">
-          <li><a href="pdf/MRS-datasheet.pdf">Datasheet (PDF)</a></li>
-          <li><a href="pdf/MRS-drawing.pdf">Outline Drawing (PDF)</a></li>
-          <li><a href="pdf/MRS-calibration.pdf">Sample Channel Calibration (PDF)</a></li>
-        </ul>
+        <table class="spec-table">
+          <h3>Digital</h3>
+          <tbody>
+            <tr><th>Solid State Disk Drive</th><td>Up to 2 TB per 8 Channels</td></tr>
+            <tr><th>Commmunications</th><td>
+              <div data-label="Max"><span class="val">Gigabit Ethernet</span></div>
+              <div data-label="Max"><span class="val">RS-232 (Optional RF Modem or Stallite Modem)</span></div>
+            </td></tr>
+            <tr><th>Data Rates Supported</th><td>4.5 MB/s per 8 Channel Module</td></tr>
+            <tr><th>Channels per Recording Module</th><td>8 or 16 (Supports up to 6 Modules)</td></tr>
+            <tr><th>Data Resolution</th><td>24 Bits (LSB = 0.488 µV)</td></tr>
+            <tr><th>CPU Processor</th><td>1.6 GHz Intel Atom</td></tr>
+          </tbody>
+        </table>
+        <table class="spec-table">
+          <h3>Power</h3>
+          <tbody>
+            <tr><th>Battery or Cabled to Shore Source</th><td>24 VDC</td></tr>
+            <tr><th>Battery Types Supported</th><td>
+              <div data-label="Max"><span class="val">Alkaline</span></div>
+              <div data-label="Max"><span class="val">Rechargeable Lead-Acid</span></div>
+              <div data-label="Max"><span class="val">Rechargeable Lithium</span></div>
+            </td></tr>
+            <tr><th>Shore Source Requirements</th><td>24 VDC @ 10 A (Maximum for using 96 Channels)</td></tr>
+            <tr><th>Power Consumption</th><td>1.8 to 3.8 Watts per Channel Depending on Configuration</td></tr>
+          </tbody>
+        </table>
+        <table class="spec-table">
+          <h3>Mechanical</h3>
+          <tr><th>Operating Temperature</th><td>
+            <div data-label="Max"><span class="val">Standard: 0˚C to 70˚C</span></div>
+            <div data-label="Max"><span class="val">Extended: -40˚C to 80˚C</span></div>
+          </td></tr>
+          <tr><th>Storage Temperature</th><td>
+            <div data-label="Max"><span class="val">Standard: -45˚C to 80˚C</span></div>
+            <div data-label="Max"><span class="val">Extended: -50˚C to 85˚C</span></div>
+          </td></tr>
+          <tr><th>Size</th><td>
+            <div data-label="Max"><span class="val">Electronics Package: 60" (152cm) Long x 12" (30.5cm) Diameter</span></div>
+            <div data-label="Max"><span class="val">Battery Package: 30" (84cm) Long x 16" (41cm) Diameter</span></div>
+          </td></tr>
+          <tr><th>Weight</th><td>
+            <div data-label="Max"><span class="val">Electronics Package: 107lbs (49kg)</span></div>
+            <div data-label="Max"><span class="val">Battery Package: 190lbs (86kg)</span></div>
+          </td></tr>
+          <tr><th>Maximum Operating Depth</th><td>6,000m (Recorder with Hydrophones)</td></tr>
+        </table>
       </section>
     </div>
 
