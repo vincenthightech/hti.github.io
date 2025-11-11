@@ -1,19 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" />
-        <title>Events</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Events & News • High Tech Inc</title>
 
-    <body>
+  <!-- Set theme early -->
+  <script src="theme-init.js"></script>
+
+  <!-- Shared styles -->
+  <link rel="stylesheet" href="stylesheethome.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar" role="navigation" aria-label="Main">
+    <div class="container">
+      <div class="navbar-top">
+        <div class="logo">
+          <a href="index.html" aria-label="Home">
+            <img class="logo--light" src="Images/htiLogo.png" alt="High Tech Inc Logo" />
+            <img class="logo--dark" src="Images/htiLogo_dark.png" alt="High Tech Inc Dark Mode Logo" aria-hidden="true" />
+          </a>
+        </div>
+
+        <!-- Theme switch -->
+        <label class="switch" id="theme-switcher" aria-label="Toggle dark mode">
+          <input type="checkbox" id="theme-switch" />
+          <span class="slider" aria-hidden="true"></span>
+          <span class="switch-text" id="theme-switch-text">Dark</span>
+        </label>
+
+        <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+      </div>
+
+      <ul class="nav-links" role="menubar">
+        <li class="dropdown" role="none">
+          <a href="products.html" role="menuitem" aria-haspopup="true" aria-expanded="false">
+            Products and Services
+          </a>
+          <ul class="dropdown-menu" role="menu" aria-label="Products submenu">
+            <li role="none"><a role="menuitem" href="hydrophone.html">Hydrophones</a></li>
+            <li role="none"><a role="menuitem" href="cncMachiningServices.html">CNC Machining</a></li>
+            <li role="none"><a role="menuitem" href="array.html">Arrays</a></li>
+            <li role="none"><a role="menuitem" href="acousticSources.html">Acoustic Sources</a></li>
+            <li role="none"><a role="menuitem" href="DataAcquisitionSystems.html">Data Acquisition Systems</a></li>
+            <li role="none"><a role="menuitem" href="contractManufacturing.html">Contract Manufacturing</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown" role="none">
+          <a href="about.html" role="menuitem" aria-haspopup="true" aria-expanded="false">
+            Company
+          </a>
+          <ul class="dropdown-menu" role="menu" aria-label="Company submenu">
+            <li role="none"><a role="menuitem" href="about.html">About Us</a></li>
+            <li role="none"><a role="menuitem" href="event.html" aria-current="page">Events/News</a></li>
+            <li role="none"><a role="menuitem" href="contact.html">Contact</a></li>
+          </ul>
+        </li>
+
+        <li role="none">
+          <a href="careers.html" role="menuitem">
+            Careers
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero hero--compact">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <h1>Events & News</h1>
+        <p>
+          For current announcements, project highlights, and industry event updates,
+          follow High Tech, Inc. on LinkedIn.
+        </p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="https://www.linkedin.com/company/high-tech-inc-usa" target="_blank" rel="noopener">
+            Visit Our LinkedIn
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Primary LinkedIn Highlight -->
+  <section class="features" aria-labelledby="linkedin-title">
+    <div class="container">
+      <h2 id="linkedin-title">Stay Updated</h2>
+      <p class="subhead">
+        We centralize most news, job postings, and event participation updates on our LinkedIn page.
+      </p>
+
+      <div class="feature-grid">
+        <article class="card">
+          <h3>Follow High Tech, Inc. on LinkedIn</h3>
+          <div class="hero-ctas" style="margin-top:.75rem">
+            <a class="btn btn-primary" href="https://www.linkedin.com/company/high-tech-inc-usa" target="_blank" rel="noopener">
+              Open LinkedIn Page
+            </a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>What You’ll Find There</h3>
+          <ul class="checklist">
+            <li>Trade show and conference appearances</li>
+            <li>Product and capability announcements</li>
+            <li>Program and partnership highlights</li>
+            <li>Career and recruiting updates</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fallback CTA -->
+  <section class="cta">
+    <div class="container cta-grid">
+      <div>
+        <h2>Need specific event or media information?</h2>
+        <p>Contact us directly for documentation, schedules, or coordination.</p>
+      </div>
+      <div class="cta-actions">
+        <a class="btn btn-primary" href="contact.html">Contact High Tech, Inc.</a>
+        <a class="btn btn-secondary" href="about.html">Learn More About Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img class="logo--light" src="Images/htiLogo_dark.png" alt="High Tech Inc Logo" />
+        <img class="logo--dark" src="Images/htiLogo_dark.png" alt="High Tech Inc Dark Mode Logo" aria-hidden="true" />
+        <p>Precision hydrophones and acoustic systems.</p>
+      </div>
+      <div>
+        <h4>Products and Services</h4>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="products.html">Products and Services</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="event.html">Events/News</a></li>
+          <li><a href="array.html">Arrays</a></li>
+          <li><a href="hydrophone.html">Hydrophones</a></li>
+          <li><a href="cncMachiningServices.html">CNC Machining</a></li>
+          <li><a href="products.html">All Products</a></li>
         </ul>
-    </body>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="event.html" aria-current="page">Events/News</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="careers.html">Careers</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <small>© <span id="year"></span> High Tech, Inc. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="main.js" defer></script>
+  <script>
+    // Basic fallback for navbar and year
+    document.addEventListener('scroll', () => {
+      const nav = document.querySelector('.navbar');
+      if (!nav) return;
+      if (window.scrollY > 8) nav.classList.add('scrolled');
+      else nav.classList.remove('scrolled');
+    });
+    const y = document.getElementById('year');
+    if (y) y.textContent = new Date().getFullYear();
+  </script>
+</body>
 </html>
