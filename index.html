@@ -9,6 +9,16 @@
   <title>Hydrophones and Acoustic Systems</title>
   <script src="theme-init.js"></script>
   <link rel="stylesheet" href="stylesheethome.css" />
+
+  <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+  <script type="importmap">
+    {
+      "imports": {
+      "three": "https://unpkg.com/three@v0.153.0/build/three.module.js",
+      "three/addons/": "https://unpkg.com/thre5@v0.153.0/examples/jsm/"
+    }
+  }
+  </script>
 </head>
 <body>
 
@@ -65,7 +75,7 @@
   </nav>
 
   <!-- HERO -->
-  <section class="hero">
+  <section class="hero hero--home">
     <div class="container hero-grid">
       <div class="hero-copy">
         <h1>Make Better Acoustic Decisions, Faster</h1>
@@ -77,11 +87,6 @@
           <a class="btn btn-primary" href="products.html">View Products</a>
           <a class="btn btn-secondary" href="contact.html">Contact Us</a>
         </div>
-        <div class="hero-bullets">
-          <span>Lab-Grade Calibration</span>
-          <span>Pressure up to 10,000 psi</span>
-          <span>Research, Government, and Industry Applications</span>
-        </div>
       </div>
       <div class="hero-media" aria-hidden="true">
         <img src="Images/hti90U.png"
@@ -91,7 +96,42 @@
     </div>
   </section>
 
-  <!-- TRUST BAR -->
+ 
+  <!-- FEATURES GRID -->
+  <section class="features">
+    <div class="container">
+      <h2>Why Choose Our Hydrophones</h2>
+      <p class="subhead">Performance that stands up to real-world conditions.</p>
+
+      <div class="feature-grid">
+        <article class="card">
+          <div class="icon">◎</div>
+          <h3>Feature</h3>
+          <p>Feature</p>
+        </article>
+
+        <article class="card">
+          <div class="icon">⚙</div>
+          <h3>Ruggedized Design</h3>
+          <p>Pressure-tolerant materials and sealed assemblies for harsh deployments.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon">⇆</div>
+          <h3>Feature</h3>
+          <p>Feature</p>
+        </article>
+
+        <article class="card">
+          <div class="icon">✓</div>
+          <h3>Tested</h3>
+          <p>Every unit verified with calibrated equipment.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+   <!-- TRUST BAR -->
   <section class="trust">
     <div class="container">
       <p class="eyebrow"></p>
@@ -159,39 +199,6 @@
     </div>
   </section>
 
-  <!-- FEATURES GRID -->
-  <section class="features">
-    <div class="container">
-      <h2>Why Choose Our Hydrophones</h2>
-      <p class="subhead">Performance that stands up to real-world conditions.</p>
-
-      <div class="feature-grid">
-        <article class="card">
-          <div class="icon">◎</div>
-          <h3>Feature</h3>
-          <p>Feature</p>
-        </article>
-
-        <article class="card">
-          <div class="icon">⚙</div>
-          <h3>Ruggedized Design</h3>
-          <p>Pressure-tolerant materials and sealed assemblies for harsh deployments.</p>
-        </article>
-
-        <article class="card">
-          <div class="icon">⇆</div>
-          <h3>Feature</h3>
-          <p>Feature</p>
-        </article>
-
-        <article class="card">
-          <div class="icon">✓</div>
-          <h3>Tested</h3>
-          <p>Every unit verified with calibrated equipment.</p>
-        </article>
-      </div>
-    </div>
-  </section>
 
   <!-- SPLIT SECTION (Quality Standards) -->
   <section class="split">

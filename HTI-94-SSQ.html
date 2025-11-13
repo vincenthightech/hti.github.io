@@ -6,6 +6,10 @@
   <title>HTI-94 SSQ Hydrophone | High Tech Inc</title>
   <script src="theme-init.js"></script>
   <link rel="stylesheet" href="stylesheethome.css" />
+  <!-- 3D viewer -->
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+<script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+
 </head>
 <body>
 
@@ -38,7 +42,7 @@
             <li role="none"><a role="menuitem" href="hydrophone.html">Hydrophones</a></li>
             <li role="none"><a role="menuitem" href="cncMachiningServices.html">CNC Machining</a></li>
             <li role="none"><a role="menuitem" href="array.html">Arrays</a></li>
-            <li role="none"><a role="menuitem" href="acousticSources.html">Acoustic S</a></li>
+            <li role="none"><a role="menuitem" href="acousticSources.html">Acoustic Sources</a></li>
             <li role="none"><a role="menuitem" href="DataAcquisitionSystems.html">Data Acquisition Systems</a></li>
             <li role="none"><a role="menuitem" href="contractManufacturing.html">Contract Manufacturing</a></li>
           </ul>
@@ -73,33 +77,32 @@
     <div class="container product-hero-grid">
       <div class="product-hero-copy">
         <h1>HTI-94-SSQ Hydrophone</h1>
-        <p class="lede"></p>
-        <ul class="kv-bullets">
-          <li>High sensitivity</li>
-          <li>Rugged build</li>
-          <li>Lab-grade calibration</li>
-        </ul>
         <div class="hero-ctas">
           <a class="btn btn-primary" href="contact.html">Request Quote</a>
           
-          <a class="btn btn-secondary" href="pdf/HTI-90-U-datasheet.pdf">Download Mechanical Outline</a>
+          <a class="btn btn-secondary" href="Models and Mech Outlines/Mech Outlines/94SSQ/HTI-94-SSQ MECH OUTLINE_REV A.pdf" target="_blank">Download Mechanical Outline</a>
         </div>
       </div>
 
       
       <div class="product-hero-media">
-        <img id="product-main-img" src="Images/hti94Ssq.png" alt="HTI-94-SSQ Hydrophone" loading="eager" fetchpriority="high">
-        <div class="thumb-row" role="list" aria-label="Product thumbnails">
-          <button class="thumb" aria-label="Main view">
-            <img src="Images/hti94Ssq.png" alt="" />
-          </button>
-          <button class="thumb" aria-label="Connector detail">
-            <img src="Images/placeholders/90u-detail-1.png" alt="" />
-          </button>
-          <button class="thumb" aria-label="Deployed view">
-            <img src="Images/placeholders/90u-detail-2.png" alt="" />
-          </button>
-        </div>
+        <model-viewer
+  id="product-3d"
+  src="Models and Mech Outlines/3D Models/94SSQ/94-900-06-00-00.glb"
+  alt="HTI-94-SSQ"
+  poster="Images/hti94ssq.png"          
+  camera-controls
+  camera-orbit="0deg -90deg auto"
+  camera-target="auto auto auto"
+  auto-rotate
+  bounds="auto"
+  ar
+  ar-modes="webxr scene-viewer quick-look"
+  exposure="1"
+  shadow-intensity="1"
+  loading="eager"
+  reveal="auto">
+</model-viewer>
       </div>
     </div>
   </header>
@@ -115,15 +118,14 @@
         <h3>Applications</h3>
         <ul class="checklist">
           <li>Oil & Gas</li>
-          <li>APPLICATIONS</li>
-          <li>APPLICATIONS</li>
+          <li>Seismic Industry</li>
+          <li>Nodal Systems</li>
         </ul>
 
         <h3>What’s Included</h3>
         <ul class="checklist">
           <li>HTI-94-SSQ Hydrophone</li>
-          <li></li>
-          <li></li>
+          <li>Calibration Sheet</li>
         </ul>
 
         <h3>Customizations</h3>
@@ -182,9 +184,10 @@
         <h3>Mechanical Outlines</h3>
         <ul class="download-list">
           
-          <li><a href="">MECHANICAL OUTLINES</a></li>
-          <li><a href="">MECHANICAL OUTLINES</a></li>
-          <li><a href="">MECHANICAL OUTLINES</a></li>
+          <li><a href="Models and Mech Outlines/Mech Outlines/94SSQ/HTI-94-SSQ MECH OUTLINE_REV A.pdf" target="_blank">HTI-94-SSQ Mechanical Outline</a></li>
+          <li><a href="Models and Mech Outlines/Mech Outlines/94SSQ/HTI-94-HEX MECH OUTLINE_REV A.pdf" target="_blank">HTI-94-Hex Mechanical Outline</a></li>
+          <li><a href="Models and Mech Outlines/Mech Outlines/94SSQ/HTI-94_MAW2 MECH OUTLINE_REV A.pdf" target="_blank">HTI-94 / MAW-2-HC Mechanical Outline</a></li>
+          <li><a href="Models and Mech Outlines/Mech Outlines/94SSQ/HTI-94_MAW2_AC MECH OUTLINE_REV A.pdf" target="_blank">HTI-94 / MAW-2-HC Acceleration Cancelling Mechanical Outline</a></li>
         </ul>
 
         <h3>Compliance</h3>

@@ -42,14 +42,14 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
     const mq = window.matchMedia('(prefers-color-scheme: dark)');
     const saved = localStorage.getItem('theme');
     if (!saved && mq) {
-      if (mq.addEventListener) {
-        mq.addEventListener('change', e => setTheme(e.matches ? 'dark' : 'light', false));
-      } else if (mq.addListener) {
-        mq.addListener(e => setTheme(e.matches ? 'dark' : 'light', false));
-      }
+      const handler = e => setTheme(e.matches ? 'dark' : 'light', false);
+      if (mq.addEventListener) mq.addEventListener('change', handler);
+      else if (mq.addListener) mq.addListener(handler);
     }
+  } catch (_) {}
+})();
 
-   // Mobile nav + dropdown behavior (scoped)
+// Mobile nav + dropdown behavior (absolute overlay; does not push content)
 (function () {
   const nav = document.querySelector('.navbar');
   if (!nav) return;
@@ -58,7 +58,6 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
   const navLinks = nav.querySelector('.nav-links');
   const triggers = nav.querySelectorAll('.dropdown > a');
   const mq = window.matchMedia('(max-width: 768px)');
-
   const isMobile = () => mq.matches;
 
   function closeAllSubmenus(except) {
@@ -71,12 +70,14 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
   }
 
   function openMenu() {
+    if (!navLinks) return;
     navLinks.classList.add('active');
     menuBtn?.setAttribute('aria-expanded', 'true');
-    document.body.style.overflow = 'hidden'; // lock scroll under overlay
+    document.body.style.overflow = 'hidden';
   }
 
   function closeMenu() {
+    if (!navLinks) return;
     navLinks.classList.remove('active');
     menuBtn?.setAttribute('aria-expanded', 'false');
     document.body.style.overflow = '';
@@ -90,35 +91,34 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
 
   // Hamburger toggle
   if (menuBtn) {
+    menuBtn.setAttribute('aria-expanded', 'false');
     menuBtn.addEventListener('click', toggleMenu);
   }
 
-  // Close menu on outside click
+  // Outside click closes on mobile
   document.addEventListener('click', (e) => {
     if (!isMobile()) return;
     if (!navLinks?.classList.contains('active')) return;
     if (!nav.contains(e.target)) closeMenu();
   });
 
-  // Close menu on ESC
+  // ESC closes
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeMenu();
   });
 
-  // Close menu when a top-level link (not a dropdown trigger) is clicked
+  // Close menu when a top-level non-dropdown link is clicked (mobile)
   navLinks?.addEventListener('click', (e) => {
     const a = e.target.closest('a');
     if (!a) return;
-    // If it's not the trigger of a dropdown, close on mobile
     if (isMobile() && !a.closest('.dropdown')) closeMenu();
   });
 
-  // Dropdown toggles (tap to open on mobile, normal hover on desktop)
+  // Dropdown triggers (tap to open on mobile; desktop handled by CSS hover)
   triggers.forEach(a => {
     a.setAttribute('aria-haspopup', 'true');
     a.setAttribute('aria-expanded', 'false');
 
-    // Click/tap behavior for mobile
     a.addEventListener('click', (e) => {
       if (!isMobile()) return; // desktop: let it navigate
       e.preventDefault();
@@ -129,7 +129,6 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
       a.setAttribute('aria-expanded', String(!open));
     });
 
-    // Keyboard support on mobile
     a.addEventListener('keydown', (e) => {
       if (!isMobile()) return;
       if (e.key === ' ' || e.key === 'Enter') {
@@ -140,17 +139,35 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
   });
 
   // Reset state when resizing up from mobile
-  mq.addEventListener('change', () => {
+  const onResize = () => {
     closeAllSubmenus();
     document.body.style.overflow = '';
-    // Ensure menu is closed when leaving mobile
     if (!isMobile()) navLinks?.classList.remove('active');
-  });
+    menuBtn?.setAttribute('aria-expanded', 'false');
+  };
+  if (mq.addEventListener) mq.addEventListener('change', onResize);
+  else if (mq.addListener) mq.addListener(onResize);
 })();
 
 
-    
-  } catch (_) {}
+(() => {
+  const nav = document.querySelector('.navbar');
+  const toggle = document.querySelector('.menu-toggle');
+  const links = document.querySelector('.nav-links');
 
-  
+  if (!nav) return;
+
+  // Toggle background once at load and on scroll
+  const setScrolled = () => nav.classList.toggle('scrolled', window.scrollY > 8);
+  setScrolled();
+  window.addEventListener('scroll', setScrolled, { passive: true });
+
+  // Mobile menu open/close
+  toggle?.addEventListener('click', () => {
+    const open = links.classList.toggle('active');
+    toggle.setAttribute('aria-expanded', open);
+    nav.classList.toggle('is-open', open);
+    if (open) nav.classList.add('scrolled'); else setScrolled();
+    document.body.classList.toggle('no-scroll', open);
+  });
 })();
