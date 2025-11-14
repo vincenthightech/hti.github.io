@@ -560,7 +560,7 @@ footer{ background:#06151c; color:#d1d5db; margin-top:2rem; }
   .nav-links a{
     border:0; padding:.5rem .25rem; color:#0f172a; border-bottom:2px solid transparent;
   }
-  .navbar.scrolled .nav-links a{ color:#0f172a; }
+
   .nav-links a:hover{ color: var(--brand); background:transparent; border-color: var(--accent); }
 
   /* Desktop dropdown surface */
@@ -714,4 +714,14 @@ img, video { max-width: 100%; height: auto; }
 :root[data-theme="dark"] .contact-link:hover{
   color: var(--accent);
   border-bottom-color: var(--accent);
+}
+
+/* Dark theme – keep navbar links visible when scrolled */
+:root[data-theme="dark"] .navbar.scrolled .nav-links a{
+  color: var(--text);
+}
+
+:root[data-theme="dark"] .navbar.scrolled .nav-links a:hover{
+  color: var(--accent);
+  border-color: var(--accent);
 }
