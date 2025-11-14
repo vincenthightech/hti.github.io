@@ -150,24 +150,8 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
 })();
 
 
-(() => {
-  const nav = document.querySelector('.navbar');
-  const toggle = document.querySelector('.menu-toggle');
-  const links = document.querySelector('.nav-links');
 
-  if (!nav) return;
 
-  // Toggle background once at load and on scroll
-  const setScrolled = () => nav.classList.toggle('scrolled', window.scrollY > 8);
-  setScrolled();
-  window.addEventListener('scroll', setScrolled, { passive: true });
 
-  // Mobile menu open/close
-  toggle?.addEventListener('click', () => {
-    const open = links.classList.toggle('active');
-    toggle.setAttribute('aria-expanded', open);
-    nav.classList.toggle('is-open', open);
-    if (open) nav.classList.add('scrolled'); else setScrolled();
-    document.body.classList.toggle('no-scroll', open);
-  });
-})();
+
+
