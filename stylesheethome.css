@@ -680,3 +680,38 @@ img, video { max-width: 100%; height: auto; }
 
 /*end here*/
 
+
+/* Dark theme – form fields */
+:root[data-theme="dark"] .field input,
+:root[data-theme="dark"] .field select,
+:root[data-theme="dark"] .field textarea{
+  background:#020617;          /* dark surface */
+  border-color:#1f2a33;        /* subtle border */
+  color: var(--text);
+}
+
+/* Keep focus state consistent, but not blinding */
+:root[data-theme="dark"] .field input:focus,
+:root[data-theme="dark"] .field select:focus,
+:root[data-theme="dark"] .field textarea:focus{
+  background:#020617;
+  border-color: var(--accent);
+  box-shadow:0 0 0 2px rgba(0,194,203,.28);
+}
+
+/* Softer placeholder color in dark mode */
+:root[data-theme="dark"] .field input::placeholder,
+:root[data-theme="dark"] .field textarea::placeholder{
+  color:#64748b;
+}
+
+/* Dark theme – contact links (email / phone / fax) */
+:root[data-theme="dark"] .contact-link{
+  color: var(--text);
+  border-bottom-color: #2a3944;
+}
+
+:root[data-theme="dark"] .contact-link:hover{
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
