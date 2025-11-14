@@ -205,10 +205,11 @@ body {
    ====================== */
 .hero{
   background:
-    radial-gradient(1200px 400px at 70% -10%, rgba(0,194,203,.25), transparent 60%),
-    linear-gradient(180deg, #ffffff 0%, #f3fbfc 60%, #ffffff 100%);
+    radial-gradient(1200px 400px at 70% -10%, rgba(0,194,203,.18), transparent 60%),
+    linear-gradient(180deg, #e9f2f6 0%, #edf4f7 60%, #e7edf3 100%);
   border-bottom:1px solid var(--border);
 }
+
 .hero-grid{ display:grid; gap:2rem; padding-block:3rem; grid-template-columns:1fr; }
 .hero-copy h1{
   font-size: clamp(2rem, 5vw, 3rem);
@@ -277,9 +278,10 @@ body {
 .product-hero{
   border-bottom:1px solid var(--border);
   background:
-    radial-gradient(1200px 400px at 70% -10%, rgba(0,194,203,.18), transparent 60%),
-    linear-gradient(180deg, #ffffff 0%, #f3fbfc 60%, #ffffff 100%);
+    radial-gradient(1200px 400px at 70% -10%, rgba(0,194,203,.16), transparent 60%),
+    linear-gradient(180deg, #e9f2f6 0%, #edf4f7 60%, #e7edf3 100%);
 }
+
 .product-hero-grid{
   display:grid; gap:2rem; grid-template-columns:1fr; padding-block:2.5rem;
 }
@@ -353,10 +355,17 @@ body {
 .checklist{ margin-top:1rem; padding-left:1rem; }
 .checklist li{ margin:.25rem 0; }
 
+/* Light theme default – softer bottom section */
 .testimonial{
   padding-block:3rem;
-  background: linear-gradient(180deg, #0b2530, #0a1f29);
-  color:#eaf5f8;
+  background: linear-gradient(180deg, #e3eef5, #d4e3f0); /* light blue gradient */
+  color:#0f172a;
+}
+.testimonial cite{
+  display:block;
+  text-align:center;
+  margin-top:.75rem;
+  color:#6b7280;
 }
 .testimonial blockquote{
   font-size:clamp(1.2rem, 2.2vw, 1.6rem);
@@ -367,7 +376,12 @@ body {
 /* ============
    10) CTA BAR
    ============ */
-.cta{ padding-block:2.5rem; background:#f2fbfc; border-top:1px solid var(--border); }
+.cta{
+  padding-block:2.5rem;
+  background:#ddeaf1;          /* closer to bg, not neon */
+  border-top:1px solid var(--border);
+}
+
 .cta-grid{ display:grid; gap:1rem; grid-template-columns:1fr; align-items:center; }
 .cta-actions{ display:flex; gap:.75rem; flex-wrap:wrap; }
 
