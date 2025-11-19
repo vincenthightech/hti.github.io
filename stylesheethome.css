@@ -356,10 +356,18 @@ body {
 .checklist li{ margin:.25rem 0; }
 
 /* Light theme default – softer bottom section */
+/* Light theme – testimonial */
 .testimonial{
   padding-block:3rem;
   background: linear-gradient(180deg, #e3eef5, #d4e3f0); /* light blue gradient */
   color:#0f172a;
+}
+.testimonial blockquote{
+  font-size:clamp(1.2rem, 2.2vw, 1.6rem);
+  line-height:1.4;
+  text-align:center;
+  max-width:900px;
+  margin:0 auto;
 }
 .testimonial cite{
   display:block;
@@ -367,11 +375,6 @@ body {
   margin-top:.75rem;
   color:#6b7280;
 }
-.testimonial blockquote{
-  font-size:clamp(1.2rem, 2.2vw, 1.6rem);
-  line-height:1.4; text-align:center; max-width:900px; margin:0 auto;
-}
-.testimonial cite{ display:block; text-align:center; margin-top:.75rem; color:#a6c6ce; }
 
 /* ============
    10) CTA BAR
@@ -547,6 +550,21 @@ footer{ background:#06151c; color:#d1d5db; margin-top:2rem; }
 
 :root[data-theme="dark"] .link-list a{ color: var(--text); }
 :root[data-theme="dark"] .link-list a:hover{ background: rgba(0,194,203,.08); border-color: var(--border); }
+
+/* Dark theme – testimonial strip */
+:root[data-theme="dark"] .testimonial{
+  background: linear-gradient(180deg, #0b2530, #0a1f29);
+  color:#eaf5f8;
+}
+
+:root[data-theme="dark"] .testimonial blockquote{
+  color:#eaf5f8;
+}
+
+:root[data-theme="dark"] .testimonial cite{
+  color:#a6c6ce;
+}
+
 
 /* Dark mode logo swap */
 .logo .logo--dark, .footer-brand .logo--dark{ display:none; }
