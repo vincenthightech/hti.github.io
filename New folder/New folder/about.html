@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Us • High Tech Inc</title>
+
+  <!-- Set theme early to avoid flash -->
+  <script src="theme-init.js"></script>
+
+  <!-- Use the same stylesheet as other pages -->
+  <link rel="stylesheet" href="stylesheethome.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar" role="navigation" aria-label="Main">
+    <div class="container">
+      <div class="navbar-top">
+        <div class="logo">
+          <a href="index.html" aria-label="Home">
+            <img class="logo--light" src="Images/htiLogo.png" alt="High Tech Inc Logo" />
+            <img class="logo--dark" src="Images/htiLogo_dark.png" alt="High Tech Inc Dark Mode Logo" aria-hidden="true" />
+          </a>
+        </div>
+
+        <!-- Theme switch -->
+        <label class="switch" id="theme-switcher" aria-label="Toggle dark mode">
+          <input type="checkbox" id="theme-switch" />
+          <span class="slider" aria-hidden="true"></span>
+          <span class="switch-text" id="theme-switch-text">Dark</span>
+        </label>
+
+        <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+      </div>
+
+      <ul class="nav-links" role="menubar">
+        <li class="dropdown" role="none">
+          <a href="products.html" role="menuitem" aria-haspopup="true" aria-expanded="false">
+            Products and Services
+          </a>
+          <ul class="dropdown-menu" role="menu" aria-label="Products submenu">
+            <li role="none"><a role="menuitem" href="hydrophone.html">Hydrophones</a></li>
+            <li role="none"><a role="menuitem" href="cncMachiningServices.html">CNC Machining</a></li>
+            <li role="none"><a role="menuitem" href="array.html">Arrays</a></li>
+            <li role="none"><a role="menuitem" href="acousticSources.html">Acoustic Sources</a></li>
+            <li role="none"><a role="menuitem" href="DataAcquisitionSystems.html">Data Acquisition Systems</a></li>
+            <li role="none"><a role="menuitem" href="contractManufacturing.html">Contract Manufacturing</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown" role="none">
+          <a href="about.html"
+             role="menuitem"
+             aria-haspopup="true"
+             aria-expanded="false"
+             aria-current="page">
+            Company
+          </a>
+          <ul class="dropdown-menu" role="menu" aria-label="Company submenu">
+            <li role="none"><a role="menuitem" href="about.html" aria-current="page">About Us</a></li>
+            <li role="none"><a role="menuitem" href="contact.html">Contact</a></li>
+            <li role="none"><a role="menuitem" href="event.html">Events/News</a></li>
+            <li role="none"><a role="menuitem" href="careers.html">Careers</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero hero--compact">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <h1>About High Tech, Inc.</h1>
+        <p>
+          Founded in 1989 in Mississippi, High Tech, Inc. designs and manufactures
+          field-proven hydrophones, arrays, acoustic sources, and data acquisition
+          systems for the U.S. Navy and the global marine seismic community.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Company Story -->
+  <section class="split" aria-labelledby="company-story-title">
+    <div class="container split-grid">
+      <div class="split-copy">
+        <h2 id="company-story-title">Our Story</h2>
+        <p>
+            High Tech, Inc. was founded and incorporated in the state of 
+            Mississippi in 1989. From its inception, it has supplied the 
+            Navy ad the worldwide seimic community with high quality hydrophones 
+            and data acquisition intrumentation. High Tech has continued 
+            a steady growth since the beginning and is recognized as an 
+            industry leader in deep water hydrophones and acquisition systems.
+        </p>
+        <p>
+            Our family of engineers, technicians, and production personnel strive
+            for total customer satisfaction through Service, Dependability, and 
+            Total Quality Management. At High Tech, a variety of test equipment 
+            is utilized in both subassembly and final assembly test procedures to 
+            assure that the work performed meets or exceeds customer's expectations.
+            High Tech products and systems have been selected to meet the stringent 
+            requirements of military applications including Anti-Submarine Warfare, 
+            Propulsion Noise Test Systems, Torpedo Testing, Marine Ambient Noise, 
+            Arctic Noise Monitoring and Surveillance.
+        </p>
+
+        <p>
+            The worldwide seismic industry has utilized High Tech hydrophones and 
+            systems as a cost effective and versatile means of performing deep and 
+            shallow water geophysical surveys. Current military users range from 
+            research facilites to operational commands. In association with marine 
+            fisheries organizations, High Tech has developed transducers both for 
+            marine mammal monitoring and as enforcement devices for monitoring 
+            compliance with Federal and State regulations.
+        </p>
+        <p>
+            High Tech, Inc. moved in 2012 and began operating in its new 25,000 
+            square foot facility situated on 6 acres of property in Long Beach, 
+            Mississippi. We have strong relationships with local lending institutions 
+            and the business community. Over the years, we have formed strong 
+            relationships with vendors and manufacturers, securing quality sources of 
+            needed parts and components. High Tech's success has been recognized in 1997 by 
+            local business community by receiving the "Mississippi Gulf Coast Small Business 
+            of the Year" award. In 1998, it was recognized for its worldwide contributions 
+            by receiving the "Mississippi Exporter of the Year Award". It received the 
+            "Mississippi Export Achievement Certificate", awarded by the US Department 
+            of Commerce, in 2004 and 2010. 
+        </p>
+      </div>
+
+      <div class="split-media">
+        <img
+          src="Images/building.jpg"
+          alt="High Tech Inc facility"
+          loading="lazy"
+        />
+
+      <div class="split-copy">
+        <h2>What We Support</h2>
+        <ul class="checklist">
+          <li>Anti-Submarine Warfare (ASW)</li>
+          <li>Propulsion Noise Test Systems</li>
+          <li>Torpedo Testing and Tracking</li>
+          <li>Marine Ambient Noise Measurement</li>
+          <li>Arctic Noise Monitoring and Surveillance</li>
+          <li>Deep and shallow water geophysical surveys</li>
+          <li>Marine mammal monitoring and regulatory compliance</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Facility & Capability -->
+  <section class="features" aria-labelledby="facility-title">
+    <div class="container">
+      <h2 id="facility-title">Facility, Supply Chain, and Capability</h2>
+      <p class="subhead">
+        A stable, production ready operation built for defense and commercial programs.
+      </p>
+
+      <div class="feature-grid">
+        <article class="card">
+          <h3>Modern Manufacturing Campus</h3>
+          <p>
+            In 2012, High Tech, Inc. moved into a 25,000 square foot facility on
+            six acres in Long Beach, Mississippi, purpose-built for production,
+            testing, and engineering support.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Qualified Vendor Network</h3>
+          <p>
+            Established relationships with key suppliers and manufacturers secure
+            consistent access to quality components and materials for demanding programs.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Financial & Community Strength</h3>
+          <p>
+            Strong standing with regional financial institutions and long-term
+            participation in the Gulf Coast business community underpin schedule
+            integrity and contract performance.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Awards & Recognition</h3>
+          <p>
+            Recognized as:
+          </p>
+          <ul class="checklist">
+            <li>Mississippi Gulf Coast Small Business of the Year (1997)</li>
+            <li>Mississippi Exporter of the Year (1998)</li>
+            <li>Mississippi Export Achievement Certificate (2004, 2010)</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container cta-grid">
+      <div>
+        <h2>Work with a proven partner.</h2>
+      </div>
+      <div class="cta-actions">
+        <a class="btn btn-primary" href="contact.html">Contact Engineering</a>
+        <a class="btn btn-secondary" href="products.html">Explore Products &amp; Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img class="logo--light" src="Images/htiLogo_dark.png" alt="High Tech Inc Logo" />
+        <img class="logo--dark" src="Images/htiLogo_dark.png" alt="High Tech Inc Dark Mode Logo" aria-hidden="true" />
+        <p>Precision hydrophones and acoustic systems.</p>
+      </div>
+      <div>
+        <h4>Products and Services</h4>
+        <ul>
+          <li><a href="array.html">Arrays</a></li>
+          <li><a href="hydrophone.html">Hydrophones</a></li>
+          <li><a href="cncMachiningServices.html">CNC Machining</a></li>
+          <li><a href="products.html">All Products</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html" aria-current="page">About</a></li>
+          <li><a href="event.html">Events/News</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <small>© <span id="year"></span> High Tech, Inc. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="main.js" defer></script>
+
+  <!-- Minimal fallbacks (optional, mirrors products.html) -->
+  <script>
+    document.addEventListener('scroll', () => {
+      const nav = document.querySelector('.navbar');
+      if (!nav) return;
+      if (window.scrollY > 8) nav.classList.add('scrolled');
+      else nav.classList.remove('scrolled');
+    });
+    const y = document.getElementById('year');
+    if (y) y.textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

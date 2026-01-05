@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>POEMS-A System | High Tech Inc</title>
+  <script src="theme-init.js"></script>
+  <link rel="stylesheet" href="stylesheethome.css" />
+</head>
+<body>
+  <!-- Navbar identical -->
+  <nav class="navbar" role="navigation" aria-label="Main">
+    <div class="container">
+      <div class="navbar-top">
+        <div class="logo">
+          <a href="index.html" aria-label="Home">
+            <img class="logo--light" src="Images/htiLogo.png" alt="High Tech Inc Logo" />
+            <img class="logo--dark" src="Images/htiLogo_dark.png" alt="High Tech Inc Dark Mode Logo" aria-hidden="true" />
+          </a>
+        </div>
+        <label class="switch" aria-label="Toggle dark mode">
+          <input type="checkbox" id="theme-switch" />
+          <span class="slider"></span>
+          <span class="switch-text" id="theme-switch-text">Dark</span>
+        </label>
+        <button class="menu-toggle" aria-expanded="false">☰</button>
+      </div>
+      <ul class="nav-links" role="menubar">
+        <li class="dropdown">
+          <a href="products.html" role="menuitem">Products and Services</a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="hydrophone.html">Hydrophones</a></li>
+            <li><a href="cncMachiningServices.html">CNC Machining</a></li>
+            <li><a href="array.html">Arrays</a></li>
+            <li><a href="acousticSources.html">Acoustic Sources</a></li>
+            <li><a href="DataAcquisitionSystems.html">Data Acquisition Systems</a></li>
+            <li><a href="contractManufacturing.html">Contract Manufacturing</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="about.html" role="menuitem">Company</a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="event.html">Events/News</a></li>
+            <li role="none"><a role="menuitem" href="careers.html">Careers</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <div class="container">
+      <a href="index.html">Home</a><span aria-hidden="true">›</span>
+      <a href="DataAcquisitionSystems.html">Data Acquisition Systems</a><span aria-hidden="true">›</span>
+      <span class="current" aria-current="page">POEMS-A System</span>
+    </div>
+  </nav>
+
+  <header class="product-hero">
+    <div class="container product-hero-grid">
+      <div class="product-hero-copy">
+        <h1>POEMS-A System</h1>
+        <p class="lede">
+          The POEMS-A developed by High Tech, Inc. is a highly portable, autonomous
+          acoustic measurement system. The system combines many hard to find features
+          in a single, compact instrument.
+        </p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="contact.html">Request Quote</a>
+        </div>
+      </div>
+      <div class="product-hero-media">
+        <img id="product-main-img" src="Images/poemsA.jpg" alt="POEMS-A System">
+      </div>
+    </div>
+  </header>
+
+  <main class="product-body">
+    <div class="container product-grid">
+      <section class="card">
+        <h2>Overview</h2>
+        <p>
+          The system was specifically designed to be used with High Tech, Inc. HTI-92-WB low
+          noise, wide band hydrophones. The hydrophone array incorporates a proprietary
+          encapsulation process to prevent leakage to seawater. Custom signal conditioning
+          curcuit boards have been designed and built for the 24 acoustic channels. Programming
+          and control software for controlling system operation through High Tech Inc.'s custom
+          controller card are included with the system. No software development by the customer
+          is required.
+        </p>
+
+        <h3>Key Features</h3>
+        <ul class="checklist">
+          <li>Wide Bandwidth (50 kHz)</li>
+          <li>24-Bit Data Samples</li>
+          <li>±25 ppm Clock Accuracy</li>
+          <li>24-Channel Array using HTI-92-WB Hydrophones</li>
+          <li>102 kHz Max Sample Rate</li>
+          <li>2 Hour Recording Time (1 Battery Pack)</li>
+          <li>Lightweight Package (140lbs)</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h3>Options</h3>
+        <p>Flexibility is built into the basic system design. POEMS-A provides these options:</p>
+        <ul class="checklist">
+          <li>RF Telemetry Link for the Surface Buoy or Bottom Mounted Operations.</li>
+          <li>Additional Battery Pack to Extend Recording Time.</li>
+          <li>Bottom Mounted with Vertical or Horizontal Array.</li>
+          <li>Surface Buoy</li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="container" style="padding-block:1rem">
+      <a class="btn btn-secondary" href="DataAcquisitionSystems.html">← Back to Data Acquisition Systems</a>
+    </div>
+  </main>
+
+  <footer> <!-- standard footer --> 
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img class="logo--light" src="Images/htiLogo_dark.png" alt="High Tech Inc Dark Mode Logo" />
+        <img class="logo--dark" src="Images/htiLogo_dark.png" alt="High Tech Inc Dark Mode Logo" aria-hidden="true" />
+        <p>Precision hydrophones and acoustic systems.</p>
+      </div>
+      <div>
+        <h4>Products and Services</h4>
+        <ul>
+          <li><a href="array.html">Arrays</a></li>
+          <li><a href="hydrophone.html">Hydrophones</a></li>
+          <li><a href="cncMachiningServices.html">CNC Machining</a></li>
+          <li><a href="products.html">All Products</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="event.html">Events/News</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <small>© <span id="year"></span> High Tech Inc. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <script src="main.js" defer></script>
+  <script>
+    document.addEventListener('click', (e) => {
+      const btn = e.target.closest('.thumb');
+      if (!btn) return;
+      const img = btn.querySelector('img');
+      const main = document.getElementById('product-main-img');
+      if (img && main) main.src = img.src;
+    });
+  </script>
+</body>
+</html>

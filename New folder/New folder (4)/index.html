@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  />
+  <title>Hydrophones and Acoustic Systems</title>
+  <script src="theme-init.js"></script>
+  <link rel="stylesheet" href="stylesheethome.css" />
+  <!-- 3D viewer -->
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+<script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+
+</head>
+<body>
+
+  <!-- Sticky Navbar -->
+  <nav class="navbar" role="navigation" aria-label="Main">
+    <div class="container">
+      <div class="navbar-top">
+        <div class="logo">
+          <a href="index.html" aria-label="Home">
+            <img class="logo--light" src="Images/htiLogo.png" alt="High Tech Inc Logo" />
+            <img class="logo--dark" src="Images/htiLogo_dark.png" alt="High Tech Inc Dark Mode Logo" aria-hidden="true" />
+          </a>
+        </div>
+
+        <!-- Theme switch -->
+      <label class="switch" id="theme-switcher" aria-label="Toggle dark mode">
+        <input type="checkbox" id="theme-switch" />
+        <span class="slider" aria-hidden="true"></span>
+        <span class="switch-text" id="theme-switch-text">Dark</span>
+      </label>
+
+        <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+      </div>
+
+      <ul class="nav-links" role="menubar">
+        <!-- Products dropdown -->
+        <li class="dropdown" role="none">
+          <a href="products.html" role="menuitem" aria-haspopup="true" aria-expanded="false">
+            Products and Services
+          </a>
+          <ul class="dropdown-menu" role="menu" aria-label="Products submenu">
+            <li role="none"><a role="menuitem" href="hydrophone.html">Hydrophones</a></li>
+            <li role="none"><a role="menuitem" href="cncMachiningServices.html">CNC Machining</a></li>
+            <li role="none"><a role="menuitem" href="array.html">Arrays</a></li>
+            <li role="none"><a role="menuitem" href="acousticSources.html">Acoustic Sources</a></li>
+            <li role="none"><a role="menuitem" href="DataAcquisitionSystems.html">Data Acquisition Systems</a></li>
+            <li role="none"><a role="menuitem" href="contractManufacturing.html">Contract Manufacturing</a></li>
+          </ul>
+        </li>
+
+        <!-- Company dropdown (About + Contact) -->
+        <li class="dropdown" role="none">
+          <a href="about.html" role="menuitem" aria-haspopup="true" aria-expanded="false">Company</a>
+          <ul class="dropdown-menu" role="menu" aria-label="Company submenu">
+            <li role="none"><a role="menuitem" href="about.html">About Us</a></li>
+            <li role="none"><a role="menuitem" href="contact.html">Contact</a></li>
+            <li role="none"><a role="menuitem" href="event.html">Events/News</a></li>
+            <li role="none"><a role="menuitem" href="careers.html">Careers</a></li>
+          </ul>
+        </li>
+
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero hero--home">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <h1>Make Better Acoustic Decisions</h1>
+        <p>
+          Precision hydrophones and acoustic systems engineered for
+          field reliability and lab-grade performance.
+        </p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="products.html">View Products</a>
+          <a class="btn btn-secondary" href="contact.html">Contact Us</a>
+        </div>
+      </div>
+      <div class="hero-media" aria-hidden="true">
+        <img src="Images/hti90U.png"
+       alt="HTI-90-U"
+       loading="eager" fetchpriority="high">
+      </div>
+    </div>
+  </section>
+
+ 
+  <!-- FEATURES GRID -->
+  <section class="features">
+    <div class="container">
+      <h2>Why Choose Our Hydrophones</h2>
+      <p class="subhead">Performance that stands up to real-world conditions.</p>
+
+      <div class="feature-grid">
+        <article class="card">
+          <div class="icon">◎</div>
+          <h3>Custom Design</h3>
+          <p>Customized connectors, cable length, frequency response, depth rating, and more to match your platform.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon">⚙</div>
+          <h3>Ruggedized Design</h3>
+          <p>Pressure-tolerant materials and sealed assemblies for harsh deployments.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon">⇆</div>
+          <h3>Wideband Frequency</h3>
+          <p>Capture everything from low frequency rumble to high frequency detail with stable response.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon">✓</div>
+          <h3>Tested</h3>
+          <p>Every unit verified in house with calibrated equipment.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+   <!-- TRUST BAR -->
+  <section class="trust">
+    <div class="container">
+      <p class="eyebrow"></p>
+      <div class="logo-marquee" role="region" aria-label="Organizations that use our products">
+  <div class="marquee-inner">
+    <!-- group 1 -->
+    <ul class="marquee-group">
+    </ul>
+
+    <!-- group 2 (duplicate of group 1 for seamless loop) -->
+    <ul class="marquee-group" aria-hidden="true">
+    </ul>
+  </div>
+</div>
+    </div>
+  </section>
+
+
+  <!-- SPLIT SECTION (Quality Standards) -->
+  <section class="split">
+    <div class="container split-grid">
+      <div class="split-media" aria-hidden="true">
+        <img src="Images/qc.png"
+       alt="Quality Control"
+       loading="eager" fetchpriority="high">
+      </div>
+      <div class="split-copy">
+        <h2>Quality Standards</h2>
+        <p>
+          We practice total quality management and verify every unit meets or exceeds requirements.
+        </p>
+        <ul class="checklist">
+          <li>MIL-I-45208A</li>
+          <li>IPC-A-610 Class 2 & 3 Inspection</li>
+          <li>ESD Controls</li>
+          <li>Equipment Calibration Control</li>
+          <li>Process Control</li>
+          <li>Product Acceptance Testing</li>
+          <li>Engineering & Test Documentation</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIAL / PROOF -->
+  <section class="testimonial">
+    <div class="container">
+      <blockquote>
+        “Testimony Testimony Testimony”
+      </blockquote>
+      <cite>Senior Engineer, Placeholder Institute</cite>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="cta">
+    <div class="container cta-grid">
+      <div>
+        <h2>Ready to dive deep?</h2>
+        <p>Contact our engineering team for a quote or technical details.</p>
+      </div>
+      <div class="cta-actions">
+        <a class="btn btn-primary" href="contact.html">Contact</a>
+        <a class="btn btn-secondary" href="products.html">Browse Products</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img class="logo--light" src="Images/htiLogo_dark.png" alt="High Tech Inc Dark Mode Logo" />
+        <img class="logo--dark" src="Images/htiLogo_dark.png" alt="High Tech Inc Dark Mode Logo" aria-hidden="true" />
+        <p>Precision hydrophones and acoustic systems.</p>
+      </div>
+      <div>
+        <h4>Products and Services</h4>
+        <ul>
+          <li><a href="array.html">Arrays</a></li>
+          <li><a href="hydrophone.html">Hydrophones</a></li>
+          <li><a href="cncMachiningServices.html">CNC Machining</a></li>
+          <li><a href="products.html">All Products</a></li>
+          
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="event.html">Events/News</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <small>© <span id="year"></span> High Tech Inc. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <script src="main.js" defer></script>
+  <script>
+    // Sticky navbar background on scroll
+    document.addEventListener('scroll', () => {
+      const nav = document.querySelector('.navbar');
+      if (window.scrollY > 8) nav.classList.add('scrolled');
+      else nav.classList.remove('scrolled');
+    });
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

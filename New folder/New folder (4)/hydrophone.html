@@ -3,42 +3,13 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Events & News • High Tech Inc</title>
-
-  <!-- Set theme early -->
+  <title>Hydrophones | High Tech Inc</title>
   <script src="theme-init.js"></script>
-
-  <!-- Shared styles -->
   <link rel="stylesheet" href="stylesheethome.css" />
-
-  <!-- LinkedIn embed styling-->
-  <style>
-    .linkedin-embed {
-      margin-top: 0.75rem;
-      border-radius: 16px;
-      overflow: hidden;
-      border: 1px solid var(--border, #e5e7eb);
-      background: var(--card, #ffffff);
-    }
-
-    .linkedin-embed iframe {
-      width: 100%;
-      border: 0;
-      display: block;
-      min-height: 620px; 
-    }
-
-    .small-note {
-      font-size: 0.9rem;
-      opacity: 0.85;
-      margin-top: 0.5rem;
-    }
-  </style>
 </head>
-
 <body>
 
-  <!-- Navbar -->
+  <!-- Sticky Navbar (same structure as index) -->
   <nav class="navbar" role="navigation" aria-label="Main">
     <div class="container">
       <div class="navbar-top">
@@ -55,11 +26,13 @@
           <span class="slider" aria-hidden="true"></span>
           <span class="switch-text" id="theme-switch-text">Dark</span>
         </label>
+        
 
         <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
       </div>
 
       <ul class="nav-links" role="menubar">
+        <!-- Products dropdown -->
         <li class="dropdown" role="none">
           <a href="products.html" role="menuitem" aria-haspopup="true" aria-expanded="false">
             Products and Services
@@ -74,14 +47,13 @@
           </ul>
         </li>
 
+        <!-- Company dropdown -->
         <li class="dropdown" role="none">
-          <a href="about.html" role="menuitem" aria-haspopup="true" aria-expanded="false">
-            Company
-          </a>
+          <a href="about.html" role="menuitem" aria-haspopup="true" aria-expanded="false">Company</a>
           <ul class="dropdown-menu" role="menu" aria-label="Company submenu">
             <li role="none"><a role="menuitem" href="about.html">About Us</a></li>
-            <li role="none"><a role="menuitem" href="event.html">Events/News</a></li>
             <li role="none"><a role="menuitem" href="contact.html">Contact</a></li>
+            <li role="none"><a role="menuitem" href="event.html">Events/News</a></li>
             <li role="none"><a role="menuitem" href="careers.html">Careers</a></li>
           </ul>
         </li>
@@ -89,67 +61,91 @@
     </div>
   </nav>
 
-  <!-- Hero -->
+  <!-- Page header (compact hero) -->
   <section class="hero hero--compact">
     <div class="container hero-grid">
       <div class="hero-copy">
-        <h1>Events & News</h1>
-        <p>
-          For current announcements, project highlights, and industry event updates,
-          follow High Tech, Inc. on LinkedIn.
-        </p>
-        <div class="hero-ctas">
-          <a class="btn btn-primary"
-             href="https://www.linkedin.com/company/high-tech-inc-usa"
-             target="_blank"
-             rel="noopener noreferrer">
-            Visit Our LinkedIn
-          </a>
-        </div>
+        <h1>Hydrophones</h1>
+        <p>Application sorted models.</p>
       </div>
     </div>
   </section>
 
-  <!-- LinkedIn Highlight + Embedded Post -->
-  <section class="features" aria-labelledby="linkedin-title">
+  <!-- Catalog -->
+  <section id="catalog" class="features">
     <div class="container">
-      <h2 id="linkedin-title">Stay Updated</h2>
-      <p class="subhead">
-        We centralize most news, job postings, and event participation updates on our LinkedIn page.
-      </p>
+      <h2>Catalog by Application</h2>
+      <p class="subhead">Direct links to model pages.</p>
 
       <div class="feature-grid">
-        <article class="card card--wide" aria-label="Latest LinkedIn update">
-          <h3>Latest on LinkedIn</h3>
 
-          <div class="linkedin-embed">
-            <iframe
-              src="https://www.linkedin.com/embed/feed/update/urn:li:activity:7367287587494916096"
-              title="Embedded LinkedIn post"
-              loading="lazy"
-              allowfullscreen=""
-            ></iframe>
-          </div>
-
-          <div style="margin-top: 1rem;">
-            <a class="btn btn-primary"
-               href="https://www.linkedin.com/company/high-tech-inc-usa"
-               target="_blank"
-               rel="noopener noreferrer">
-              See Posts
-            </a>
-          </div>
+        <!-- Anti-Submarine Warfare Defense -->
+        <article class="card">
+          <h3>Anti-Submarine Warfare Defense</h3>
+          <ul class="link-list">
+            <li><a href="./HTI-90-U.html">HTI-90-U</a></li>
+            <li><a href="HTI-92-WB.html">HTI-92-WB</a></li>
+            <li><a href="HTI-90-PC.html">HTI-90-PC</a></li>
+            <li><a href="./HTI-O4-PCAULF.html">HTI-04-PCA/ULF</a></li>
+            <li><a href="HTI-05-PC.html">HTI-05-PC</a></li>
+          </ul>
         </article>
 
+        <!-- Oil & Gas -->
+        <article class="card">
+          <h3>Oil &amp; Gas</h3>
+          <ul class="link-list">
+            <li><a href="HTI-96-MinSeries.html">HTI-96-Min Series</a></li>
+            <li><a href="HTI-96-minExportable.html">HTI-96-Min Exportable</a></li>
+            <li><a href="HTI-96-Min-PC.html">HTI-96-Min-PC</a></li>
+            <li><a href="HTI-94-SSQ.html">HTI-94-SSQ</a></li>
+            <li><a href="HTI-97-DA.html">HTI-97-DA</a></li>
+            <li><a href="HTI-97-DAexportable.html">HTI-97-DA Exportable</a></li>
+            <li><a href="HTI-15-min.html">HTI-15-Min</a></li>
+            <li><a href="HTI-15-Min-Micro.html">HTI-15-Min-Micro</a></li>
+          </ul>
+        </article>
+
+        <!-- Borehole/Downhole -->
+        <article class="card">
+          <h3>Borehole / Downhole</h3>
+          <ul class="link-list">
+            <li><a href="HTI-00-DHPC.html">HTI-00-DHPC</a></li>
+            <li><a href="HTI-02-DHPCD.html">HTI-02-DHPC/D</a></li>
+            <li><a href="HTI-02-DHPCG.html">HTI-02-DHPC/G</a></li>
+            <li><a href="HTI-05-DHPC.html">HTI-05-DHPC</a></li>
+            <li><a href="HTI-14-DHPC.html">HTI-14-DHPC</a></li>
+          </ul>
+        </article>
+
+        <!-- Wildlife Research -->
+        <article class="card">
+          <h3>Wildlife Research</h3>
+          <ul class="link-list">
+            <li><a href="marineMammal.html">Marine Mammal</a></li>
+            <li><a href="HTI-99-HF.html">HTI-99-HF</a></li>
+            <li><a href="HTI-99-UHF.html">HTI-99-UHF</a></li>
+          </ul>
+        </article>
+
+        <!-- Gun Monitoring -->
+        <article class="card">
+          <h3>Gun Monitoring</h3>
+          <ul class="link-list">
+            <li><a href="reftek17.html">Reftek 17</a></li>
+            <li><a href="HTI-90-U.html">HTI-90-U</a></li>
+            <li><a href="HTI-94-SSQ.html">HTI-94-SSQ</a></li>
+          </ul>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- Footer (same as index) -->
   <footer>
     <div class="container footer-grid">
       <div class="footer-brand">
-        <img class="logo--light" src="Images/htiLogo_dark.png" alt="High Tech Inc Logo" />
+        <img class="logo--light" src="Images/htiLogo_dark.png" alt="High Tech Inc Dark Mode Logo" />
         <img class="logo--dark" src="Images/htiLogo_dark.png" alt="High Tech Inc Dark Mode Logo" aria-hidden="true" />
         <p>Precision hydrophones and acoustic systems.</p>
       </div>
@@ -166,29 +162,16 @@
         <h4>Company</h4>
         <ul>
           <li><a href="about.html">About</a></li>
-          <li><a href="event.html" aria-current="page">Events/News</a></li>
+          <li><a href="event.html">Events/News</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li><a href="careers.html">Careers</a></li>
         </ul>
       </div>
     </div>
     <div class="container footer-bottom">
-      <small>© <span id="year"></span> High Tech, Inc. All rights reserved.</small>
+      <small>© <span id="year"></span> High Tech Inc. All rights reserved.</small>
     </div>
   </footer>
 
-  <!-- Scripts -->
   <script src="main.js" defer></script>
-  <script>
-    document.addEventListener('scroll', () => {
-      const nav = document.querySelector('.navbar');
-      if (!nav) return;
-      if (window.scrollY > 8) nav.classList.add('scrolled');
-      else nav.classList.remove('scrolled');
-    });
-
-    const y = document.getElementById('year');
-    if (y) y.textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>

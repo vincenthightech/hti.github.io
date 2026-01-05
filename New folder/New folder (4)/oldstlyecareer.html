@@ -10,32 +10,7 @@
 
   <!-- Shared styles -->
   <link rel="stylesheet" href="stylesheethome.css" />
-
-  <!-- LinkedIn embed styling-->
-  <style>
-    .linkedin-embed {
-      margin-top: 0.75rem;
-      border-radius: 16px;
-      overflow: hidden;
-      border: 1px solid var(--border, #e5e7eb);
-      background: var(--card, #ffffff);
-    }
-
-    .linkedin-embed iframe {
-      width: 100%;
-      border: 0;
-      display: block;
-      min-height: 620px; 
-    }
-
-    .small-note {
-      font-size: 0.9rem;
-      opacity: 0.85;
-      margin-top: 0.5rem;
-    }
-  </style>
 </head>
-
 <body>
 
   <!-- Navbar -->
@@ -93,56 +68,42 @@
   <section class="hero hero--compact">
     <div class="container hero-grid">
       <div class="hero-copy">
-        <h1>Events & News</h1>
+        <h1>Contact</h1>
         <p>
-          For current announcements, project highlights, and industry event updates,
-          follow High Tech, Inc. on LinkedIn.
+          For any questions or comments about our services, products, or company.
         </p>
-        <div class="hero-ctas">
-          <a class="btn btn-primary"
-             href="https://www.linkedin.com/company/high-tech-inc-usa"
-             target="_blank"
-             rel="noopener noreferrer">
-            Visit Our LinkedIn
-          </a>
-        </div>
       </div>
     </div>
   </section>
 
-  <!-- LinkedIn Highlight + Embedded Post -->
+  <!-- Primary LinkedIn Highlight -->
   <section class="features" aria-labelledby="linkedin-title">
     <div class="container">
       <h2 id="linkedin-title">Stay Updated</h2>
-      <p class="subhead">
-        We centralize most news, job postings, and event participation updates on our LinkedIn page.
-      </p>
-
       <div class="feature-grid">
-        <article class="card card--wide" aria-label="Latest LinkedIn update">
-          <h3>Latest on LinkedIn</h3>
-
-          <div class="linkedin-embed">
-            <iframe
-              src="https://www.linkedin.com/embed/feed/update/urn:li:activity:7367287587494916096"
-              title="Embedded LinkedIn post"
-              loading="lazy"
-              allowfullscreen=""
-            ></iframe>
-          </div>
-
-          <div style="margin-top: 1rem;">
-            <a class="btn btn-primary"
-               href="https://www.linkedin.com/company/high-tech-inc-usa"
-               target="_blank"
-               rel="noopener noreferrer">
-              See Posts
-            </a>
-          </div>
+        <article class="card">
+            <p>High Tech, Inc.</p>
+            <p>21120 Johnson Road</p>
+            <p>Long Beach, MS 39560</p>
+            <p>Phone: (228) 868-6632</p>
+            <p>Fax: (228) 868-6645</p>
+            <p>Email: hightechinc@att.net</p>
         </article>
-
+        <article class="card">
+            <h3>Interested in working as a team with us?</h3>
+            <p>
+                At High Tech, Inc. we are always looking for qualified, prospective employees.
+                If you are interested in joining our professional team inquire by emailing your
+                resume and Employment Application PDF found here to high_techin@bellsouth.net. The
+                Employment Application can also be printed to be filled out by hand, then scanned
+                and emailed.
+            </p>
+        </article>
       </div>
     </div>
+    
+  </section>
+  
   </section>
 
   <!-- Footer -->
@@ -180,13 +141,13 @@
   <!-- Scripts -->
   <script src="main.js" defer></script>
   <script>
+    // Basic fallback for navbar and year
     document.addEventListener('scroll', () => {
       const nav = document.querySelector('.navbar');
       if (!nav) return;
       if (window.scrollY > 8) nav.classList.add('scrolled');
       else nav.classList.remove('scrolled');
     });
-
     const y = document.getElementById('year');
     if (y) y.textContent = new Date().getFullYear();
   </script>

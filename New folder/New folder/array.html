@@ -3,39 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Events & News • High Tech Inc</title>
-
-  <!-- Set theme early -->
+  <title>Arrays | High Tech Inc</title>
   <script src="theme-init.js"></script>
-
-  <!-- Shared styles -->
   <link rel="stylesheet" href="stylesheethome.css" />
-
-  <!-- LinkedIn embed styling-->
-  <style>
-    .linkedin-embed {
-      margin-top: 0.75rem;
-      border-radius: 16px;
-      overflow: hidden;
-      border: 1px solid var(--border, #e5e7eb);
-      background: var(--card, #ffffff);
-    }
-
-    .linkedin-embed iframe {
-      width: 100%;
-      border: 0;
-      display: block;
-      min-height: 620px; 
-    }
-
-    .small-note {
-      font-size: 0.9rem;
-      opacity: 0.85;
-      margin-top: 0.5rem;
-    }
-  </style>
 </head>
-
 <body>
 
   <!-- Navbar -->
@@ -49,7 +20,6 @@
           </a>
         </div>
 
-        <!-- Theme switch -->
         <label class="switch" id="theme-switcher" aria-label="Toggle dark mode">
           <input type="checkbox" id="theme-switch" />
           <span class="slider" aria-hidden="true"></span>
@@ -60,6 +30,7 @@
       </div>
 
       <ul class="nav-links" role="menubar">
+        <!-- Products dropdown -->
         <li class="dropdown" role="none">
           <a href="products.html" role="menuitem" aria-haspopup="true" aria-expanded="false">
             Products and Services
@@ -74,14 +45,13 @@
           </ul>
         </li>
 
+        <!-- Company dropdown -->
         <li class="dropdown" role="none">
-          <a href="about.html" role="menuitem" aria-haspopup="true" aria-expanded="false">
-            Company
-          </a>
+          <a href="about.html" role="menuitem" aria-haspopup="true" aria-expanded="false">Company</a>
           <ul class="dropdown-menu" role="menu" aria-label="Company submenu">
             <li role="none"><a role="menuitem" href="about.html">About Us</a></li>
-            <li role="none"><a role="menuitem" href="event.html">Events/News</a></li>
             <li role="none"><a role="menuitem" href="contact.html">Contact</a></li>
+            <li role="none"><a role="menuitem" href="event.html">Events/News</a></li>
             <li role="none"><a role="menuitem" href="careers.html">Careers</a></li>
           </ul>
         </li>
@@ -89,58 +59,111 @@
     </div>
   </nav>
 
-  <!-- Hero -->
+  <!-- Header -->
   <section class="hero hero--compact">
     <div class="container hero-grid">
       <div class="hero-copy">
-        <h1>Events & News</h1>
-        <p>
-          For current announcements, project highlights, and industry event updates,
-          follow High Tech, Inc. on LinkedIn.
-        </p>
-        <div class="hero-ctas">
-          <a class="btn btn-primary"
-             href="https://www.linkedin.com/company/high-tech-inc-usa"
-             target="_blank"
-             rel="noopener noreferrer">
-            Visit Our LinkedIn
-          </a>
-        </div>
+        <h1>Hydrophone Arrays</h1>
+        <p>Custom multi-channel arrays for vertical cable, bottom cable, and deep-towed streamer applications.</p>
       </div>
     </div>
   </section>
 
-  <!-- LinkedIn Highlight + Embedded Post -->
-  <section class="features" aria-labelledby="linkedin-title">
+  <!-- Highlights -->
+  <section class="features" style="padding-block:2.5rem">
     <div class="container">
-      <h2 id="linkedin-title">Stay Updated</h2>
-      <p class="subhead">
-        We centralize most news, job postings, and event participation updates on our LinkedIn page.
-      </p>
+      <h2>Why Our Arrays</h2>
+      <p class="subhead">Built for reliability, repeatability, and clean data.</p>
 
       <div class="feature-grid">
-        <article class="card card--wide" aria-label="Latest LinkedIn update">
-          <h3>Latest on LinkedIn</h3>
+        <article class="card">
+          <div class="icon">⇆</div>
+          <h3>Modular Configuration</h3>
+          <p>
+            Supports customizable spacing, geometry, and channel counts
+            to match specific seismic, defense, research, or environmental
+            monitoring requirements.
+          </p>
+        </article>
+        <article class="card">
+          <div class="icon">⚙</div>
+          <h3>Rugged Construction</h3>
+          <p>Engineered to withstand harsh offshore, deepwater, and long duration deployments.</p>
+        </article>
+        <article class="card">
+          <div class="icon">✓</div>
+          <h3>Tested</h3>
+          <p>Each unit is tested and verified to ensure repeatable acoustic performance.</p>
+        </article>
+      </div>
+    </div>
+  </section>
 
-          <div class="linkedin-embed">
-            <iframe
-              src="https://www.linkedin.com/embed/feed/update/urn:li:activity:7367287587494916096"
-              title="Embedded LinkedIn post"
-              loading="lazy"
-              allowfullscreen=""
-            ></iframe>
-          </div>
+  <!-- Catalog -->
+  <section id="catalog" class="features">
+    <div class="container">
+      <h2>Array Catalog</h2>
+      <p class="subhead"></p>
 
-          <div style="margin-top: 1rem;">
-            <a class="btn btn-primary"
-               href="https://www.linkedin.com/company/high-tech-inc-usa"
-               target="_blank"
-               rel="noopener noreferrer">
-              See Posts
-            </a>
-          </div>
+      <div class="feature-grid">
+        <article class="card">
+          <h3>94-SSQ Array</h3>
+          <p></p>
+          <ul class="link-list">
+            <li><a href="94ssqArray.html">View Page</a></li>
+            <li><a href="contact.html">Request a Quote</a></li>
+          </ul>
         </article>
 
+        <article class="card">
+          <h3>96-Min Array</h3>
+          <p></p>
+          <ul class="link-list">
+            <li><a href="96-Min.html">View Page</a></li>
+            <li><a href="contact.html">Request a Quote</a></li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>15-Min Array</h3>
+          <p></p>
+          <ul class="link-list">
+            <li><a href="15-Min.html">View Page</a></li>
+            <li><a href="contact.html">Request a Quote</a></li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Use cases (split) -->
+  <section class="split">
+    <div class="container split-grid">
+      <div class="split-media" aria-hidden="true">
+        <img src="Images/arraySmall.png">
+      </div>
+      <div class="split-copy">
+        <h2>Applications</h2>
+        <ul class="checklist">
+          <li>Marine Mammal Research</li>
+          <li>Environmental Monitoring</li>
+          <li>Detecting Submarines or Drones</li>
+          <li>Monitoring Seismic Surveys and Offshore Drilling</li>
+        </ul>
+        <p class="muted"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container cta-grid">
+      <div>
+        <h2>Ready for a Quote?</h2>
+      </div>
+      <div class="cta-actions">
+        <a class="btn btn-primary" href="contact.html">Contact Engineering</a>
+        <a class="btn btn-secondary" href="products.html">Browse All Products</a>
       </div>
     </div>
   </section>
@@ -149,7 +172,7 @@
   <footer>
     <div class="container footer-grid">
       <div class="footer-brand">
-        <img class="logo--light" src="Images/htiLogo_dark.png" alt="High Tech Inc Logo" />
+        <img class="logo--light" src="Images/htiLogo_dark.png" alt="High Tech Inc Dark Mode Logo" />
         <img class="logo--dark" src="Images/htiLogo_dark.png" alt="High Tech Inc Dark Mode Logo" aria-hidden="true" />
         <p>Precision hydrophones and acoustic systems.</p>
       </div>
@@ -166,29 +189,16 @@
         <h4>Company</h4>
         <ul>
           <li><a href="about.html">About</a></li>
-          <li><a href="event.html" aria-current="page">Events/News</a></li>
+          <li><a href="event.html">Events/News</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li><a href="careers.html">Careers</a></li>
         </ul>
       </div>
     </div>
     <div class="container footer-bottom">
-      <small>© <span id="year"></span> High Tech, Inc. All rights reserved.</small>
+      <small>© <span id="year"></span> High Tech Inc. All rights reserved.</small>
     </div>
   </footer>
 
-  <!-- Scripts -->
   <script src="main.js" defer></script>
-  <script>
-    document.addEventListener('scroll', () => {
-      const nav = document.querySelector('.navbar');
-      if (!nav) return;
-      if (window.scrollY > 8) nav.classList.add('scrolled');
-      else nav.classList.remove('scrolled');
-    });
-
-    const y = document.getElementById('year');
-    if (y) y.textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>

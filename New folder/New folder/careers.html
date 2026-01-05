@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Careers • High Tech Inc</title>
+
+  <!-- Set theme early -->
+  <script src="theme-init.js"></script>
+
+  <!-- Shared styles -->
+  <link rel="stylesheet" href="stylesheethome.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar" role="navigation" aria-label="Main">
+    <div class="container">
+      <div class="navbar-top">
+        <div class="logo">
+          <a href="index.html" aria-label="Home">
+            <img class="logo--light" src="Images/htiLogo.png" alt="High Tech Inc Logo" />
+            <img class="logo--dark" src="Images/htiLogo_dark.png" alt="High Tech Inc Dark Mode Logo" aria-hidden="true" />
+          </a>
+        </div>
+
+        <!-- Theme switch -->
+        <label class="switch" id="theme-switcher" aria-label="Toggle dark mode">
+          <input type="checkbox" id="theme-switch" />
+          <span class="slider" aria-hidden="true"></span>
+          <span class="switch-text" id="theme-switch-text">Dark</span>
+        </label>
+
+        <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+      </div>
+
+      <ul class="nav-links" role="menubar">
+        <li class="dropdown" role="none">
+          <a href="products.html" role="menuitem" aria-haspopup="true" aria-expanded="false">
+            Products and Services
+          </a>
+          <ul class="dropdown-menu" role="menu" aria-label="Products submenu">
+            <li role="none"><a role="menuitem" href="hydrophone.html">Hydrophones</a></li>
+            <li role="none"><a role="menuitem" href="cncMachiningServices.html">CNC Machining</a></li>
+            <li role="none"><a role="menuitem" href="array.html">Arrays</a></li>
+            <li role="none"><a role="menuitem" href="acousticSources.html">Acoustic Sources</a></li>
+            <li role="none"><a role="menuitem" href="DataAcquisitionSystems.html">Data Acquisition Systems</a></li>
+            <li role="none"><a role="menuitem" href="contractManufacturing.html">Contract Manufacturing</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown" role="none">
+          <a href="about.html" role="menuitem" aria-haspopup="true" aria-expanded="false">
+            Company
+          </a>
+          <ul class="dropdown-menu" role="menu" aria-label="Company submenu">
+            <li role="none"><a role="menuitem" href="about.html">About Us</a></li>
+            <li role="none"><a role="menuitem" href="event.html">Events/News</a></li>
+            <li role="none"><a role="menuitem" href="contact.html">Contact</a></li>
+            <li role="none"><a role="menuitem" href="careers.html">Careers</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero hero--compact">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <h1>Careers at High Tech, Inc.</h1>
+        <p>
+          Join a team designing and building hydrophones, arrays, and marine acoustic systems
+          used in demanding defense and seismic applications worldwide.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Openings Summary -->
+  <section class="features" aria-labelledby="openings-title">
+    <div class="container">
+      <h2 id="openings-title">Current Opportunities</h2>
+      <p class="subhead">
+        We regularly recruit for technical, production, and operational roles that support naval,
+        seismic, and research customers. Submit your application below for consideration.
+      </p>
+
+      <div class="feature-grid">
+        <article class="card">
+          <h3>Engineering & Design</h3>
+          <p>Electrical, mechanical, and computer engineers supporting hydrophone, array, and system design.</p>
+        </article>
+        <article class="card">
+          <h3>Production & Test</h3>
+          <p>Assemblers, technicians, and test personnel ensuring performance.</p>
+        </article>
+        <article class="card">
+          <h3>CNC Machining</h3>
+          <p>Operators, machinists, and programmers producing a variety of material components.</p>
+        </article>
+        <article class="card">
+          <h3>Operations &amp; Support</h3>
+          <p>Quality, documentation, logistics, and administrative roles that keep programs on schedule.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Application Form -->
+  <section class="contact-main" aria-labelledby="application-title">
+    <div class="container contact-grid">
+      <div>
+        <h2 id="application-title">Submit Your Application</h2>
+        <p class="muted">
+          Provide your information, upload your resume, and the HTI Employment application.
+          A member of our team will review and contact you if there is a fit with current or upcoming needs.
+        </p>
+      </div>
+
+      <div>
+        <form class="contact-form" id="careers-form" method="post" action="#" enctype="multipart/form-data">
+          <!-- Honeypot -->
+          <div class="hp">
+            <label for="company">Leave this field empty</label>
+            <input type="text" id="company" name="company" tabindex="-1" autocomplete="off" />
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="name">Full Name *</label>
+              <input id="name" name="name" type="text" required />
+            </div>
+            <div class="field">
+              <label for="email">Email *</label>
+              <input id="email" name="email" type="email" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="phone">Phone *</label>
+              <input id="phone" name="phone" type="tel" required />
+            </div>
+            <div class="field">
+              <label for="position">Position of Interest *</label>
+              <select id="position" name="position" required>
+                <option value="">Select an option</option>
+                <option value="Engineering">Engineering / Design</option>
+                <option value="Production">Production / Test Technician</option>
+                <option value="CNC">CNC Machinist / Programmer</option>
+                <option value="Quality">Quality / Documentation</option>
+                <option value="Operations">Operations / Administration</option>
+                <option value="Other">General Consideration</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="resume">Resume & and Employment Application(PDF) *</label>
+            <input id="resume" name="resume" type="file" accept=".pdf" required />
+          </div>
+
+          <div class="field">
+            <label for="source">How did you hear about High Tech, Inc.?</label>
+            <select id="source" name="source">
+              <option value="">Select an option</option>
+              <option value="Referral">Employee / Customer Referral</option>
+              <option value="Website">High Tech, Inc. Website</option>
+              <option value="Job Board">Job Board Posting</option>
+              <option value="Event">Industry Event / Conference</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Submit Application</button>
+            <div class="form-status" aria-live="polite">
+              Your information will be reviewed by our team.
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img class="logo--light" src="Images/htiLogo_dark.png" alt="High Tech Inc Logo" />
+        <img class="logo--dark" src="Images/htiLogo_dark.png" alt="High Tech Inc Dark Mode Logo" aria-hidden="true" />
+        <p>Precision hydrophones and acoustic systems.</p>
+      </div>
+      <div>
+        <h4>Products and Services</h4>
+        <ul>
+          <li><a href="array.html">Arrays</a></li>
+          <li><a href="hydrophone.html">Hydrophones</a></li>
+          <li><a href="cncMachiningServices.html">CNC Machining</a></li>
+          <li><a href="products.html">All Products</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="event.html">Events/News</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="careers.html" aria-current="page">Careers</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <small>© <span id="year"></span> High Tech, Inc. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="main.js" defer></script>
+  <script>
+    // Basic fallback for navbar and year
+    document.addEventListener('scroll', () => {
+      const nav = document.querySelector('.navbar');
+      if (!nav) return;
+      if (window.scrollY > 8) nav.classList.add('scrolled');
+      else nav.classList.remove('scrolled');
+    });
+    const y = document.getElementById('year');
+    if (y) y.textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

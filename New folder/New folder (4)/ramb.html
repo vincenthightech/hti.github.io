@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RAMB System | High Tech Inc</title>
+  <script src="theme-init.js"></script>
+  <link rel="stylesheet" href="stylesheethome.css" />
+</head>
+<body>
+  <!-- Navbar identical -->
+  <nav class="navbar" role="navigation" aria-label="Main">
+    <div class="container">
+      <div class="navbar-top">
+        <div class="logo">
+          <a href="index.html" aria-label="Home">
+            <img class="logo--light" src="Images/htiLogo.png" alt="High Tech Inc Logo" />
+            <img class="logo--dark" src="Images/htiLogo_dark.png" alt="High Tech Inc Dark Mode Logo" aria-hidden="true" />
+          </a>
+        </div>
+        <label class="switch" aria-label="Toggle dark mode">
+          <input type="checkbox" id="theme-switch" />
+          <span class="slider"></span>
+          <span class="switch-text" id="theme-switch-text">Dark</span>
+        </label>
+        <button class="menu-toggle" aria-expanded="false">☰</button>
+      </div>
+      <ul class="nav-links" role="menubar">
+        <li class="dropdown">
+          <a href="products.html" role="menuitem">Products and Services</a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="hydrophone.html">Hydrophones</a></li>
+            <li><a href="cncMachiningServices.html">CNC Machining</a></li>
+            <li><a href="array.html">Arrays</a></li>
+            <li><a href="acousticSources.html">Acoustic Sources</a></li>
+            <li><a href="DataAcquisitionSystems.html">Data Acquisition Systems</a></li>
+            <li><a href="contractManufacturing.html">Contract Manufacturing</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="about.html" role="menuitem">Company</a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="event.html">Events/News</a></li>
+            <li role="none"><a role="menuitem" href="careers.html">Careers</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <div class="container">
+      <a href="index.html">Home</a><span aria-hidden="true">›</span>
+      <a href="DataAcquisitionSystems.html">Data Acquisition Systems</a><span aria-hidden="true">›</span>
+      <span class="current" aria-current="page">RAMB System</span>
+    </div>
+  </nav>
+
+  <header class="product-hero">
+    <div class="container product-hero-grid">
+      <div class="product-hero-copy">
+        <h1>RAMB System</h1>
+        <p class="lede">
+          The RAMB System consists of a buoyant float assembly which houses a powerful
+          electronics package. The system utilizes a 900 MHz radio link and GPS capable
+          of communicating up to 10 Km. Two shipboard laptops, the monitor control station
+          (MCS) and GPS tracking, are used for communicating and tracking the buoy via the 
+          radio link. A ship base GPS is used for distance correlation.
+        </p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="contact.html">Request Quote</a>
+        </div>
+      </div>
+      <div class="product-hero-media">
+        <img id="product-main-img" src="Images/ramb.jpg" alt="RAMB System">
+      </div>
+    </div>
+  </header>
+
+  <main class="product-body">
+    <div class="container product-grid">
+      <section class="card">
+        <h2>Overview</h2>
+        <p>
+          The system incorporates a rechargeble sealed lead acid battery pack,
+          capable of over 12 hours of continuous recording and 160 hours of
+          standby. Signals from the array sensors are recorded and stored on
+          a hard disk drive. The data may be downloaded by removing an access 
+          port and connecting to a RJ-45 ethernet connection.
+        </p>
+        <h3>Features</h3>
+        <ul class="checklist">
+          <li>
+            5 Channel Base Configuration (Upgradeabl to 8), of High Quality Digital
+            Data Sampled at 65 kHz (Upgradeable to 96 kHz).
+          </li>
+          <li>
+            Independent Remote Activation of Each Channel, Selectable Precise Channel
+            Gains and Selectable High Pass Filtering.
+          </li>
+          <li>
+            GPS Data Continuously Displays the Distance of Buoy From Remote Base with
+            the Full GPS Positioning System Accuracy of ± a Meter.
+          </li>
+          <li>
+            Up to 10km Rnage of Communication.
+          </li>
+          <li>
+            Buoy Status Constantly Transmits the Buoy Battery Voltage, Battery Current,
+            Buoy Temperature, Leak Detection, Disk Space, Time, and Several System Power
+            Supply Voltages for Display on the MCS Computer.
+          </li>
+          <li>
+            Continuous Updates from the Buoy, Displays Average RMS Voltage for Each Channel.
+          </li>
+          <li>
+            Each Channel Contains a Selectable Low Frequency Sample Rates.
+          </li>
+
+        </ul>
+      </section>
+    </div>
+
+    <div class="container" style="padding-block:1rem">
+      <a class="btn btn-secondary" href="DataAcquisitionSystems.html">← Back to Data Acquisition Systems</a>
+    </div>
+  </main>
+
+  <footer> <!-- standard footer --> 
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img class="logo--light" src="Images/htiLogo_dark.png" alt="High Tech Inc Dark Mode Logo" />
+        <img class="logo--dark" src="Images/htiLogo_dark.png" alt="High Tech Inc Dark Mode Logo" aria-hidden="true" />
+        <p>Precision hydrophones and acoustic systems.</p>
+      </div>
+      <div>
+        <h4>Products and Services</h4>
+        <ul>
+          <li><a href="array.html">Arrays</a></li>
+          <li><a href="hydrophone.html">Hydrophones</a></li>
+          <li><a href="cncMachiningServices.html">CNC Machining</a></li>
+          <li><a href="products.html">All Products</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="event.html">Events/News</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <small>© <span id="year"></span> High Tech Inc. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <script src="main.js" defer></script>
+  <script>
+    document.addEventListener('click', (e) => {
+      const btn = e.target.closest('.thumb');
+      if (!btn) return;
+      const img = btn.querySelector('img');
+      const main = document.getElementById('product-main-img');
+      if (img && main) main.src = img.src;
+    });
+  </script>
+</body>
+</html>

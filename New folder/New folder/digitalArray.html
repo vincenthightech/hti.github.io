@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Digital Array System | High Tech Inc</title>
+  <script src="theme-init.js"></script>
+  <link rel="stylesheet" href="stylesheethome.css" />
+</head>
+<body>
+  <!-- Navbar identical to MRS.html -->
+  <nav class="navbar" role="navigation" aria-label="Main">
+    <div class="container">
+      <div class="navbar-top">
+        <div class="logo">
+          <a href="index.html" aria-label="Home">
+            <img class="logo--light" src="Images/htiLogo.png" alt="High Tech Inc Logo" />
+            <img class="logo--dark" src="Images/htiLogo_dark.png" alt="High Tech Inc Dark Mode Logo" aria-hidden="true" />
+          </a>
+        </div>
+        <label class="switch" aria-label="Toggle dark mode">
+          <input type="checkbox" id="theme-switch" />
+          <span class="slider" aria-hidden="true"></span>
+          <span class="switch-text" id="theme-switch-text">Dark</span>
+        </label>
+        <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+      </div>
+      <ul class="nav-links" role="menubar">
+        <li class="dropdown" role="none">
+          <a href="products.html" role="menuitem">Products and Services</a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="hydrophone.html">Hydrophones</a></li>
+            <li><a href="cncMachiningServices.html">CNC Machining</a></li>
+            <li><a href="array.html">Arrays</a></li>
+            <li><a href="acousticSources.html">Acoustic Sources</a></li>
+            <li><a href="DataAcquisitionSystems.html">Data Acquisition Systems</a></li>
+            <li><a href="contractManufacturing.html">Contract Manufacturing</a></li>
+          </ul>
+        </li>
+        <li class="dropdown" role="none">
+          <a href="about.html" role="menuitem">Company</a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="event.html">Events/News</a></li>
+            <li role="none"><a role="menuitem" href="careers.html">Careers</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <div class="container">
+      <a href="index.html">Home</a><span aria-hidden="true">›</span>
+      <a href="DataAcquisitionSystems.html">Data Acquisition Systems</a><span aria-hidden="true">›</span>
+      <span class="current" aria-current="page">Digital Array System</span>
+    </div>
+  </nav>
+
+  <header class="product-hero">
+    <div class="container product-hero-grid">
+      <div class="product-hero-copy">
+        <h1>Digital Array System</h1>
+        <p class="lede">
+          The HTI Digital Array System is a hydrophone array system designed for use
+          in vertical cable applications, bottom cable surveys, and deep towed streamers.
+          The system operates in water depths up to 6,000 meters and can accommodate up
+          to 96 channels at a sample rate of 0.25 to 2 milliseconds.
+        </p>
+        <ul class="kv-bullets">
+        </ul>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="contact.html">Request Quote</a>
+        </div>
+      </div>
+      <div class="product-hero-media">
+        <img id="product-main-img" src="Images/digitalArray1.jpg" alt="Digital Array System">
+        <div class="thumb-row">
+          <button class="thumb"><img src="Images/digitalArray1.jpg" alt=""></button>
+          <button class="thumb"><img src="Images/digitalArray2.jpg" alt=""></button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="product-body">
+    <div class="container product-grid">
+      <section class="card">
+        <h2>Overview</h2>
+        <p>
+          Each of the nodes, or channels, in the digital vertical cable is made
+          up of a hydrophone and a 24 bit Delta-Sigma A/D converter electronics
+          module. Nodes are interchangable and designed to be easily replaced in
+          the field. An acoustic position system is integrated into each node. The
+          spacing between nodes and overall cable length is determined by the user.
+          Power consumption by each node has been minimized to facilitate power
+          transmission down the cable from an autonomous buoy battery pack.
+        </p>
+
+        <h2>Applications:</h3>
+        <h3>Vertical Array System</h2>
+        <p>
+            The total system consists of a vertical two conductor hydrophone
+            cable anchored to the sea floor and connected by an S-tether to
+            the autonomous recording buoy. The recording buoy communicates with
+            the shipboard interface via radio telemetry.
+        </p>  
+
+        <h3>Towed Array System</h2>
+          <p>
+            The total system consists of a horizontal hydrophone cable which is
+            a coaxial neutrally buoyant cable with a maximum operating depth of
+            6,000 meters. The array may include heading and depth sensor modules.
+            Data is integrated in the sub-surface towfish electronics. Data from
+            ancillary sensors are multiplexed with the acoustic data by the 
+            towfish electronics and transmitted to the surface.
+          </p>
+      </section>
+
+      <section class="card">
+        <h2>System Specifications</h2>
+        <table class="spec-table">
+          <h3>Hydrophones</h3>
+          <tbody>
+            <tr><th>Sensitivity</th><td>-194 dB re: 1V/µPa</td></tr>
+            <tr><th>Self Noise</th><td>0.07 µBar RMS</td></tr>
+            <tr><th>Dynamic Range</th><td>117dB</td></tr>
+            <tr><th>Frequency Response</th><td>2Hz - 3,000Hz</td></tr>
+            <tr><th>Directivity</th><td>Omni-Directional to 2kHz</td></tr>
+            <tr><th>Operating Depth</th><td>10,000 Feet</td></tr>
+          </tbody>
+        </table>
+
+        <h3>Emphasis On:</h3>
+        <ul class="download-list">
+          <li>Systems Approach</li>
+          <li>Light Weight Mooring System</li>
+          <li>1 to 96 Channels Configurable</li>
+          <li>24-bit Delta Sigma A/D Converter at Each Hydrophone Channel</li>
+          <li>Identical Node Modules</li>
+          <li>Motion-Insensitive Hydrophones</li>
+          <li>Downlink Telemetry to Nodes</li>
+          <li>Optional GPS Time Synchronization</li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="container" style="padding-block:1rem">
+      <a class="btn btn-secondary" href="DataAcquisitionSystems.html">← Back to Data Acquisition Systems</a>
+    </div>
+  </main>
+
+  <footer> <!-- same footer as MRS.html --> 
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img class="logo--light" src="Images/htiLogo_dark.png" alt="High Tech Inc Dark Mode Logo" />
+        <img class="logo--dark" src="Images/htiLogo_dark.png" alt="High Tech Inc Dark Mode Logo" aria-hidden="true" />
+        <p>Precision hydrophones and acoustic systems.</p>
+      </div>
+      <div>
+        <h4>Products and Services</h4>
+        <ul>
+          <li><a href="array.html">Arrays</a></li>
+          <li><a href="hydrophone.html">Hydrophones</a></li>
+          <li><a href="cncMachiningServices.html">CNC Machining</a></li>
+          <li><a href="products.html">All Products</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="event.html">Events/News</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <small>© <span id="year"></span> High Tech Inc. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <script src="main.js" defer></script>
+  <script>
+    document.addEventListener('click', (e) => {
+      const btn = e.target.closest('.thumb');
+      if (!btn) return;
+      const img = btn.querySelector('img');
+      const main = document.getElementById('product-main-img');
+      if (img && main) main.src = img.src;
+    });
+  </script>
+</body>
+</html>

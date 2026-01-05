@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Products & Services • High Tech Inc</title>
+  <!-- Set theme -->
+  <script src="theme-init.js"></script>
+  <!-- Use the same stylesheet you shared -->
+  <link rel="stylesheet" href="stylesheethome.css" />
+</head>
+
+<style>
+/* Optional defaults */
+.icon { width: 24px; height: 24px; color: #0A2E3D; vertical-align: text-bottom; }
+</style>
+
+
+<!-- SPRITE (hidden symbols) -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+
+  <!-- 1) KEY: oa-hydrophone (standalone sensor capsule) -->
+<symbol id="oa-hydrophone" viewBox="0 0 64 64" fill="none">
+<g stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<!-- cable -->
+<path d="M32 6 V18"/>
+<!-- capsule body -->
+<rect x="23" y="18" width="18" height="22" rx="6"/>
+<!-- grille lines -->
+<path d="M26 24 H38"/>
+<path d="M26 30 H38"/>
+<!-- tail / strain relief -->
+<path d="M32 40 V48"/>
+<!-- weight / termination -->
+<circle cx="32" cy="52" r="4"/>
+</g>
+</symbol>
+
+
+<!-- 9) KEY: oa-array-vertical (vertical cable array with stacked sensors) -->
+<symbol id="oa-array-vertical" viewBox="0 0 64 64" fill="none">
+<g stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<!-- surface -->
+<path d="M8 12 C16 8, 24 16, 32 12 S48 16, 56 12"/>
+<!-- vertical cable -->
+<path d="M32 12 V52"/>
+<!-- sensor capsules -->
+<rect x="28" y="20" width="8" height="6" rx="3"/>
+<rect x="28" y="30" width="8" height="6" rx="3"/>
+<rect x="28" y="40" width="8" height="6" rx="3"/>
+<!-- bottom weight -->
+<circle cx="32" cy="56" r="4"/>
+</g>
+</symbol>
+
+<!-- 10) KEY: oa-autonomous-das (autonomous seabed recorder for marine seismic) -->
+<symbol id="oa-autonomous-das" viewBox="0 0 64 64" fill="none">
+<g stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<!-- surface -->
+<path d="M8 12 C16 8, 24 16, 32 12 S48 16, 56 12"/>
+<!-- incoming seismic wavefronts -->
+<path d="M8 44 C18 38, 18 54, 8 50"/>
+<path d="M14 42 C26 34, 26 56, 14 52"/>
+<!-- seabed -->
+<path d="M10 56 H54"/>
+<!-- recorder node body (no tether) -->
+<rect x="24" y="44" width="16" height="10" rx="4"/>
+<!-- record dot on body -->
+<circle cx="32" cy="49" r="2"/>
+<!-- autonomy/time glyph -->
+<circle cx="48" cy="36" r="5"/>
+<path d="M48 36 V32"/>
+<path d="M48 36 H51"/>
+</g>
+</symbol>
+
+
+<!-- 6) KEY: oa-source (active acoustic source emitting pings) -->
+<symbol id="oa-source" viewBox="0 0 64 64" fill="none">
+<g stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<!-- surface -->
+<path d="M8 20 C16 16, 24 24, 32 20 S48 24, 56 20"/>
+<!-- source body on a simple stand -->
+<circle cx="20" cy="40" r="6"/>
+<path d="M20 46 V52"/>
+<path d="M12 56 H28"/>
+<!-- rightward ping arcs -->
+<path d="M32 36 C40 32, 40 48, 32 44"/>
+<path d="M38 32 C50 26, 50 54, 38 48"/>
+<path d="M44 28 C60 20, 60 60, 44 52"/>
+</g>
+</symbol>
+
+<!-- 11) KEY: oa-cnc-mill (CNC milling: spindle + end mill over vise/workpiece) -->
+<symbol id="oa-cnc-mill" viewBox="0 0 64 64" fill="none">
+<g stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<!-- machine column -->
+<path d="M12 14 V50" stroke-width="4"/>
+<!-- spindle head -->
+<rect x="20" y="16" width="14" height="10" rx="2"/>
+<!-- spindle -->
+<path d="M27 26 V36"/>
+<!-- end mill -->
+<path d="M27 36 L24 42 H30 Z"/>
+<!-- toolpath to work (dashed) -->
+<path d="M30 34 H44" stroke-dasharray="4 4"/>
+<!-- vise & workpiece on table -->
+<rect x="34" y="42" width="24" height="6" rx="2"/> <!-- vise base -->
+<rect x="36" y="36" width="6" height="6" rx="1"/> <!-- fixed jaw -->
+<rect x="56" y="36" width="6" height="6" rx="1"/> <!-- moving jaw -->
+<rect x="44" y="36" width="8" height="6" rx="1"/> <!-- workpiece -->
+<!-- table line -->
+<path d="M10 52 H58"/>
+</g>
+</symbol>
+
+
+<!-- 12) KEY: oa-contract-mfg (contract + manufacturing: document with checkmark + gear) -->
+<symbol id="oa-contract-mfg" viewBox="0 0 64 64" fill="none">
+<g stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<!-- document with folded corner -->
+<rect x="12" y="12" width="28" height="38" rx="2"/>
+<path d="M40 12 L40 22 L30 12"/>
+<!-- signature/checkmark -->
+<path d="M18 32 L24 38 L32 28"/>
+<!-- manufacturing gear at bottom-right -->
+<circle cx="48" cy="46" r="7"/>
+<circle cx="48" cy="46" r="2"/>
+<!-- minimal teeth -->
+<path d="M48 36 V32"/>
+<path d="M58 46 H54"/>
+<path d="M48 60 V56"/>
+<path d="M38 46 H42"/>
+</g>
+</symbol>
+
+</svg>
+
+</svg>
+
+
+<!-- USAGE — COPY/PASTE THESE KEYS FOR ICONS -->
+<!--
+
+<svg class="icon"><use href="#oa-source"/></svg>
+
+-->
+
+
+<!-- Color and size are controlled by CSS/currentColor. Example:
+<style>
+.ocean { color: #0e7490; }
+.big { width: 40px; height: 40px; }
+</style>
+
+
+<span class="ocean big">
+<svg class="icon"><use href="#oa-buoy"/></svg>
+</span>
+-->
+
+<body>
+
+  <!-- Navbar  -->
+  <nav class="navbar" role="navigation" aria-label="Main">
+    <div class="container">
+      <div class="navbar-top">
+        <div class="logo">
+          <a href="index.html" aria-label="Home">
+            <img class="logo--light" src="Images/htiLogo.png" alt="High Tech Inc Logo" />
+            <img class="logo--dark" src="Images/htiLogo_dark.png" alt="High Tech Inc Dark Mode Logo" aria-hidden="true" />
+          </a>
+        </div>
+
+        <!-- Theme switch -->
+        <label class="switch" id="theme-switcher" aria-label="Toggle dark mode">
+          <input type="checkbox" id="theme-switch" />
+          <span class="slider" aria-hidden="true"></span>
+          <span class="switch-text" id="theme-switch-text">Dark</span>
+        </label>
+
+        <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+      </div>
+
+      <ul class="nav-links" role="menubar">
+        <li class="dropdown" role="none">
+          <a href="products.html" role="menuitem" aria-haspopup="true" aria-expanded="false" aria-current="page">
+            Products and Services
+          </a>
+          <ul class="dropdown-menu" role="menu" aria-label="Products submenu">
+            <li role="none"><a role="menuitem" href="hydrophone.html">Hydrophones</a></li>
+            <li role="none"><a role="menuitem" href="cncMachiningServices.html">CNC Machining</a></li>
+            <li role="none"><a role="menuitem" href="array.html">Arrays</a></li>
+            <li role="none"><a role="menuitem" href="acousticSources.html">Acoustic Sources</a></li>
+            <li role="none"><a role="menuitem" href="DataAcquisitionSystems.html">Data Acquisition Systems</a></li>
+            <li role="none"><a role="menuitem" href="contractManufacturing.html">Contract Manufacturing</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown" role="none">
+          <a href="about.html" role="menuitem" aria-haspopup="true" aria-expanded="false">Company</a>
+          <ul class="dropdown-menu" role="menu" aria-label="Company submenu">
+            <li role="none"><a role="menuitem" href="about.html">About Us</a></li>
+            <li role="none"><a role="menuitem" href="contact.html">Contact</a></li>
+            <li role="none"><a role="menuitem" href="event.html">Events/News</a></li>
+            <li role="none"><a role="menuitem" href="careers.html">Careers</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO  -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <!-- Image on the left now -->
+      <div class="hero-media" aria-hidden="true">
+        <img src="Images/hydrophones1.png"
+        alt="Variety Small Hydrophones"
+        loading="eager" fetchpriority="high">
+      </div>
+
+      <div class="hero-copy">
+        <h1>Products & Services</h1>
+        <p>
+          Field proven hydrophones, arrays, acoustic sources, and supporting systems
+          engineered for harsh marine environments and precise measurement.
+        </p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="#catalog">Browse Catalog</a>
+          <a class="btn btn-secondary" href="contact.html">Talk to Engineering</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Catalog -->
+  <section class="features" id="catalog" aria-labelledby="products-title">
+    <div class="container">
+      <h2 id="products-title">Catalog</h2>
+      <p class="subhead">Products and Custom Options</p>
+
+      <div class="feature-grid">
+        <!-- Hydrophones -->
+        <article class="card">
+          <svg class="icon"><use href="#oa-hydrophone"/></svg>
+          <h3>Hydrophones</h3>
+          <p>
+            Over 200,000 units have been manufactured and deployed with excellent results in
+            government and industry applications.
+          </p>
+          <div class="hero-ctas" style="margin-top:.75rem">
+            <a class="btn btn-primary" href="hydrophone.html">Learn More</a>
+            <a class="btn btn-secondary" href="contact.html">Contact</a>
+          </div>
+        </article>
+
+        <!-- Arrays -->
+        <article class="card">
+          <svg class="icon"><use href="#oa-array-vertical"/></svg>
+          <h3>Arrays</h3>
+          <p>
+            We provide a variety of custom multi-channel hydrophone arrays used in vertical
+            cable applications, bottom cable surveys, and deep towed streamers.
+          </p>
+          <div class="hero-ctas" style="margin-top:.75rem">
+            <a class="btn btn-primary" href="array.html">Learn More</a>
+            <a class="btn btn-secondary" href="contact.html">Contact</a>
+          </div>
+        </article>
+
+        <!-- Acoustic Sources -->
+        <article class="card">
+          <svg class="icon"><use href="#oa-source"/></svg>
+          <h3>Acoustic Sources</h3>
+          <p>
+            The Deep Water Acoustic Source is characterized by wide bandwidth, high output,
+            exceptional reliability, and full ocean depth capability.
+          </p>
+          <div class="hero-ctas" style="margin-top:.75rem">
+            <a class="btn btn-primary" href="acousticSources.html">Learn More</a>
+            <a class="btn btn-secondary" href="contact.html">Contact</a>
+          </div>
+        </article>
+
+        <!-- Data Acquisition -->
+        <article class="card">
+          <svg class="icon"><use href="#oa-autonomous-das"/></svg>
+          <h3>Data Acquisition Systems</h3>
+          <p>
+            We have developed and manufactured autonomous data acquisition systems for
+            recording marine seismic data using vertical or horizontal bottom-mounted
+            cables.
+          </p>
+          <div class="hero-ctas" style="margin-top:.75rem">
+            <a class="btn btn-primary" href="DataAcquisitionSystems.html">Learn More</a>
+            <a class="btn btn-secondary" href="contact.html">Contact</a>
+          </div>
+        </article>
+
+        <!-- CNC Machining -->
+        <article class="card">
+          <svg class="icon"><use href="#oa-cnc-mill"/></svg>
+          <h3>CNC Machining</h3>
+          <p>
+            Precision machined parts with tight tolerances and consistent reliability using materials suited for marine and industrial environments.
+          </p>
+          <div class="hero-ctas" style="margin-top:.75rem">
+            <a class="btn btn-primary" href="cncMachiningServices.html">Learn More</a>
+            <a class="btn btn-secondary" href="contact.html">Contact</a>
+          </div>
+        </article>
+
+        <!-- Contract Manufacturing -->
+        <article class="card">
+          <svg class="icon"><use href="#oa-contract-mfg"/></svg>
+          <h3>Contract Manufacturing</h3>
+          <p>
+            We provide contract manufacturing services which include manufacturing of sensor
+            node electronics, sensor cartridge assembly, and polyurethane/compression molding.
+          </p>
+          <div class="hero-ctas" style="margin-top:.75rem">
+            <a class="btn btn-primary" href="contractManufacturing.html">Learn More</a>
+            <a class="btn btn-secondary" href="contact.html">Contact</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quality / Standards (kept) -->
+  <section class="split" aria-labelledby="quality-title">
+    <div class="container split-grid">
+      <div class="split-media" aria-hidden="true">
+        <img
+          src="Images/qc.png"
+          alt="Quality control and test documentation"
+          loading="lazy"
+        />
+      </div>
+      <div class="split-copy">
+        <h2 id="quality-title">Quality Standards</h2>
+        <p>
+          We practice total quality management and verify every unit meets or
+          exceeds requirements.
+        </p>
+        <ul class="checklist">
+          <li>MIL-I-45208A</li>
+          <li>IPC-A-610 Class 2 & 3 Inspection</li>
+          <li>ESD Controls</li>
+          <li>Equipment Calibration Control</li>
+          <li>Process Control</li>
+          <li>Product Acceptance Testing</li>
+          <li>Engineering & Test Documentation</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container cta-grid">
+      <div>
+        <h2>Not sure where to start?</h2>
+      </div>
+      <div class="cta-actions">
+        <a class="btn btn-primary" href="contact.html">Contact Engineering</a>
+        <a class="btn btn-secondary" href="about.html">About High Tech, Inc.</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer  -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img class="logo--light" src="Images/htiLogo_dark.png" alt="High Tech Inc Logo" />
+        <img class="logo--dark" src="Images/htiLogo_dark.png" alt="High Tech Inc Dark Mode Logo" aria-hidden="true" />
+        <p>Precision hydrophones and acoustic systems.</p>
+      </div>
+      <div>
+        <h4>Products and Services</h4>
+        <ul>
+          <li><a href="array.html">Arrays</a></li>
+          <li><a href="hydrophone.html">Hydrophones</a></li>
+          <li><a href="cncMachiningServices.html">CNC Machining</a></li>
+          <li><a href="products.html">All Products</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="event.html">Events/News</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <small>© <span id="year"></span> High Tech, Inc. All rights reserved.</small>
+    </div>
+  </footer>
+
+
+  <script src="main.js" defer></script>
+
+  <!-- Minimal fallbacks -->
+  <script>
+    document.addEventListener('scroll', () => {
+      const nav = document.querySelector('.navbar');
+      if (!nav) return;
+      if (window.scrollY > 8) nav.classList.add('scrolled');
+      else nav.classList.remove('scrolled');
+    });
+    const y = document.getElementById('year');
+    if (y) y.textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
