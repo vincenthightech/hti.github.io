@@ -467,18 +467,62 @@ body {
 /* ===============
    14) FOOTER
    =============== */
-footer{ background:#06151c; color:#d1d5db; margin-top:2rem; }
+
+/* Footer theme tokens (light mode defaults) */
+:root{
+  --footer-bg: #eef4f7;                 /* soft light surface */
+  --footer-text: #475569;               /* slate */
+  --footer-heading: #0f172a;            /* dark heading */
+  --footer-link: #334155;               /* link text */
+  --footer-link-hover: var(--brand);    /* brand hover */
+  --footer-border: #dbe3ea;             /* subtle divider */
+}
+
+/* Footer theme tokens (dark mode overrides) */
+:root[data-theme="dark"]{
+  --footer-bg: #06151c;
+  --footer-text: #d1d5db;
+  --footer-heading: #ffffff;
+  --footer-link: #b8c3c8;
+  --footer-link-hover: #ffffff;
+  --footer-border: rgba(255,255,255,.08);
+}
+
+footer{
+  background: var(--footer-bg);
+  color: var(--footer-text);
+  margin-top: 0rem;
+  border-top: 1px solid var(--footer-border);
+}
+
 .footer-grid{
-  display:grid; gap:2rem; padding-block:2.5rem; grid-template-columns:1fr;
+  display:grid;
+  gap:2rem;
+  padding-block:2.5rem;
+  grid-template-columns:1fr;
 }
-.footer-grid h4{ color:#fff; margin-bottom:.5rem; }
-.footer-grid a{ color:#b8c3c8; text-decoration:none; }
-.footer-grid a:hover{ color:#fff; }
+
+.footer-grid h4{
+  color: var(--footer-heading);
+  margin-bottom:.5rem;
+}
+
+.footer-grid a{
+  color: var(--footer-link);
+  text-decoration:none;
+}
+
+.footer-grid a:hover{
+  color: var(--footer-link-hover);
+}
+
 .footer-bottom{
-  border-top:1px solid rgba(255,255,255,.08);
+  border-top: 1px solid var(--footer-border);
   padding-block:.75rem;
-  display:flex; justify-content:center;
+  display:flex;
+  justify-content:center;
 }
+
 
 /* ==============================
    15) DARK THEME TOKENS/OVERRIDES
