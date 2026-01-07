@@ -3,9 +3,13 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>94-SSQ Array | High Tech Inc</title>
+  <title>HTI-94 SSQ Array | High Tech Inc</title>
   <script src="theme-init.js"></script>
   <link rel="stylesheet" href="stylesheethome.css" />
+  <!-- 3D viewer -->
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+<script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+
 </head>
 <body>
 
@@ -62,9 +66,9 @@
     <div class="container">
       <a href="index.html">Home</a>
       <span aria-hidden="true">›</span>
-      <a href="array.html">Arrays</a>
+      <a href="hydrophone.html">Hydrophones</a>
       <span aria-hidden="true">›</span>
-      <span class="current" aria-current="page">94-SSQ Array</span>
+      <span class="current" aria-current="page">HTI-94-SSQ Array</span>
     </div>
   </nav>
 
@@ -72,98 +76,119 @@
   <header class="product-hero">
     <div class="container product-hero-grid">
       <div class="product-hero-copy">
-        <h1>94-SSQ Array</h1>
-        <p class="lede">DESCRIPTION</p>
-        <ul class="kv-bullets">
-          <li>FACT</li>
-          <li>FACT</li>
-          <li>FACT</li>
-        </ul>
+        <h1>HTI-94-SSQ Array</h1>
         <div class="hero-ctas">
-          <a class="btn btn-primary" href="contact.html">Request Quote</a>
-          <a class="btn btn-secondary" href="">Mechanical Outline</a>
+          <a class="btn btn-primary" href="contact.html">Request Quote</a>          
         </div>
       </div>
 
-      <!-- Gallery -->
       <div class="product-hero-media">
-        <img id="product-main-img" src="Images/arrays/94-SSQ/main.png" alt="94-SSQ Array" loading="eager" fetchpriority="high">
-        <div class="thumb-row" role="list" aria-label="Product thumbnails">
-          <button class="thumb" aria-label="Main view">
-            <img src="Images/arrays/94-SSQ/main.png" alt="">
-          </button>
-          <button class="thumb" aria-label="Connector detail">
-            <img src="Images/arrays/94-SSQ/conn.png" alt="">
-          </button>
-          <button class="thumb" aria-label="Deployed view">
-            <img src="Images/arrays/94-SSQ/deploy.png" alt="">
-          </button>
-        </div>
-      </div>
+  <video
+    id="product-video"
+    src="Blender Turntable Animations/94ssq.webm"
+    poster="Images/hti94ssq.png"
+    autoplay
+    muted
+    loop
+    playsinline
+  >
+    Your browser does not support the video tag.
+  </video>
+</div>
     </div>
   </header>
 
   <!-- Product body -->
   <main class="product-body">
     <div class="container product-grid">
-      <!-- Overview / options -->
+      <!-- Left column -->
       <section class="card">
         <h2>Overview</h2>
-        <p></p>
+        <p>HTI-94-SSQ Hydrophones are widely used in the seismic industry for ocean bottom cables and nodal systems. It is a deep water hydrophone capable of operating at full ocean depth.</p>
 
         <h3>Applications</h3>
         <ul class="checklist">
-          <li></li>
-          <li></li>
-          <li></li>
+          <li>Oil & Gas</li>
+          <li>Seismic Industry</li>
+          <li>Nodal Systems</li>
         </ul>
 
         <h3>What’s Included</h3>
         <ul class="checklist">
-          <li>94-SSQ Array</li>
-          <li></li>
-          <li></li>
+          <li>HTI-94-SSQ Hydrophone</li>
+          <li>Calibration Sheet</li>
         </ul>
 
-        <h3>Options &amp; Configuration</h3>
+        <h3>Customizations</h3>
+        <figure>
+            <figcaption>HTI Hydrophones are highly customizable.</figcaption>
         <ul class="checklist">
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
+          <li>Pre-Amplifier Gain</li>
+          <li>Pre-Amplifier Filter Settings</li>
+          <li>Bulkhead Mounting Endcaps</li>
+          <li>Cable Type</li>
+          <li>Cable Length</li>
         </ul>
+        </figure>
       </section>
 
-      <!-- Specifications -->
+      <!-- Right column: specs -->
       <section class="card">
         <h2>Specifications</h2>
         <table class="spec-table">
           <tbody>
-            <tr><th>Elements</th><td></td></tr>
-            <tr><th>Element Type</th><td></td></tr>
-            <tr><th>Sensitivity Match</th><td></td></tr>
-            <tr><th>Frequency Range</th><td></td></tr>
-            <tr><th>Element Spacing</th><td></td></tr>
-            <tr><th>Depth Rating</th><td></td></tr>
-            <tr><th>Cable</th><td></td></tr>
-            <tr><th>Connector</th><td></td></tr>
-            <tr><th>Operating Temp</th><td></td></tr>
-            <tr><th>Weight</th><td></td></tr>
+            
+            <tr><th>Frequency Response</th><td>2 Hz to 30 kHz</td></tr>
+            <tr><th>Sensitivity with Preamp</th><td>
+                <div data-label="Max"><span class="val">Maximum: -162 dB re: 1V/μPa (562 V/Bar)</span></div>
+                <div data-label="Min"><span class="val">Minimum: -240 dB re: 1V/µPa (0.1 V/Bar)</span></div>
+            </td></tr>
+            <tr><th>Sensitivity without Preamp</th><td>
+                <div data-label="Min"><span class="val">-198 dB re: 1V/µPa (12.6 V/Bar)</span></div>
+            </td></tr>
+            <tr><th>Equivalent Input Self Noise</th><td>
+                <div data-label="Max"><span class="val">RMS from 1 Hz to 1000 Hz:</span></div>
+                <div data-label="Max"><span class="val">78 dB re: 1 µPa</span></div>
+                <div data-label="Max"><span class="val">0.06 µBar</span></div>
+            </td></tr>
+            <tr><th>Spectral</th><td>
+                <div data-label="Max"><span class="val">54 dB re: 1 µPa/√Hz @ 10 Hz</span></div>
+                <div data-label="Min"><span class="val">40 dB re: 1 µPa/√Hz @ 100Hz</span></div>
+                <div data-label="Max"><span class="val">38 dB re: 1 µPa/√Hz @ 1000Hz</span></div>
+            </td></tr>
+            <tr><th>Preamplifier Type</th><td>
+                <div data-label="Min"><span class="val">Voltage Mode</span></div>
+                <div data-label="Max"><span class="val">Current Mode</span></div>
+            </td></tr>
+            <tr><th>Maximum Operating Depth</th><td>
+                <div data-label="Min">
+                    <span class="val">20,000 Feet</span>
+                    <div data-label="Max"><span class="val">6,096 Meters</span></div>
+                </div>
+            </td></tr>
+            <tr><th>Size</th><td>
+                <div data-label="Min"><span class="val">1.50” Length x 1.25” Diameter</span></div>
+            </td></tr>
           </tbody>
         </table>
 
-        <h3>Documents</h3>
+        <h3>Mechanical Outlines</h3>
         <ul class="download-list">
+          
+          <li><a href="Models and Mech Outlines/Mech Outlines/94SSQ/HTI-94-SSQ MECH OUTLINE_REV A.pdf" target="_blank">HTI-94-SSQ Mechanical Outline</a></li>
+          <li><a href="Models and Mech Outlines/Mech Outlines/94SSQ/HTI-94-HEX MECH OUTLINE_REV A.pdf" target="_blank">HTI-94-Hex Mechanical Outline</a></li>
+          <li><a href="Models and Mech Outlines/Mech Outlines/94SSQ/HTI-94_MAW2 MECH OUTLINE_REV A.pdf" target="_blank">HTI-94 / MAW-2-HC Mechanical Outline</a></li>
+          <li><a href="Models and Mech Outlines/Mech Outlines/94SSQ/HTI-94_MAW2_AC MECH OUTLINE_REV A.pdf" target="_blank">HTI-94 / MAW-2-HC Acceleration Cancelling Mechanical Outline</a></li>
         </ul>
 
-        <h3>Notes</h3>
-        <p class="muted">lorem upsum</p>
+        <h3>Compliance</h3>
+        <p>Manufactured under documented quality procedures with equipment calibration control. See <a href="about.html">Quality Standards</a> for details.</p>
       </section>
     </div>
 
     <!-- Back link -->
     <div class="container" style="padding-block:1rem">
-      <a class="btn btn-secondary" href="array.html">← Back to Arrays</a>
+      <a class="btn btn-secondary" href="hydrophone.html">← Back to Hydrophones</a>
     </div>
   </main>
 
@@ -171,7 +196,7 @@
   <footer>
     <div class="container footer-grid">
       <div class="footer-brand">
-        <img class="logo--light" src="Images/htiLogo_dark.png" alt="High Tech Inc Dark Mode Logo" />
+        <img class="logo--light" src="Images/htiLogo.png" alt="High Tech Inc Dark Mode Logo" />
         <img class="logo--dark" src="Images/htiLogo_dark.png" alt="High Tech Inc Dark Mode Logo" aria-hidden="true" />
         <p>Precision hydrophones and acoustic systems.</p>
       </div>
@@ -198,9 +223,10 @@
     </div>
   </footer>
 
+  <!-- Scripts -->
   <script src="main.js" defer></script>
   <script>
-    // Thumbnail -> main image swap
+    // Tiny thumbnail → main image swap (page-local, no dependency)
     document.addEventListener('click', (e) => {
       const btn = e.target.closest('.thumb');
       if (!btn) return;

@@ -858,3 +858,40 @@ img, video { max-width: 100%; height: auto; }
   .linkedin-embed { display: none !important; }
   .linkedin-fallback { display: block !important; }
 }
+
+
+@media (min-width: 900px){
+  .features--highlights .feature-grid{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .features--highlights .card:nth-child(3){
+    grid-column: 1 / -1;      /* span both columns */
+    justify-self: center;     /* center the card */
+    max-width: 640px;         /* optional: controls how wide it gets */
+    width: 100%;
+  }
+}
+
+@media (min-width: 900px){
+  .features--highlights .feature-grid{
+    align-items: stretch; /* make both top cards equal height */
+  }
+  .features--highlights .card{
+    height: 100%;
+  }
+}
+
+/* Media frame: gives videos/images/model-viewer a consistent “card” surface */
+:root{
+  --media-frame-bg: #ffffff;
+  --media-frame-border: #e5e7eb;
+  --media-frame-shadow: 0 14px 34px rgba(0,0,0,.10);
+}
+
+:root[data-theme="dark"]{
+  --media-frame-bg: #0b1217;
+  --media-frame-border: #1f2a33;
+  --media-frame-shadow: 0 18px 44px rgba(0,0,0,.55);
+}
+
