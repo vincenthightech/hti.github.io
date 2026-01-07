@@ -169,7 +169,7 @@
             <a class="btn btn-secondary" href="mailto:info@example.com">Email Instead</a>
           </div>
 
-          <!-- optional hidden fields common with third-party processors -->
+
           <input type="hidden" name="_subject" value="New inquiry from website">
           <div class="form-status" role="status" aria-live="polite"></div>
         </form>
@@ -221,7 +221,7 @@
 
   <script src="main.js" defer></script>
   <script>
-    // Optional: show a basic status message after native validation passes
+
     document.querySelector('.contact-form')?.addEventListener('submit', (e) => {
       const form = e.currentTarget;
       if (!form.checkValidity()) return; // let browser show validation
